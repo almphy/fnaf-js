@@ -1,0 +1,30 @@
+@font-face {
+    font-family: FNaF01;
+    src: url(../../Fonts/FNaF01.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: FNaF_logo;
+    src: url(../../Fonts/FNaF_logo.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: FNaF03;
+    src: url(../../Fonts/FNaF03.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: hours;
+    src: url(../../Fonts/hours.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: dashedFont;
+    src: url(../../Fonts/dashed.ttf);
+    font-weight:bold;
+}
+@font-face {
+    font-family: dashedFont2;
+    src: url(../../Fonts/dashed02.ttf);
+    font-weight:bold;
+}

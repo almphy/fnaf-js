@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>FNaF JS - Night 1</title>
+    <link rel="icon" href="../Assets/icon-2.png">
+    <style>
+    @import url("CSS/css.css");
+    @import url("CSS/fonts.css");
+    @import url("CSS/cams.css");
+    @import url("CSS/info.css");
+    @import url("CSS/jumpscares.css");
+    </style>
+</head>
+<body background="../Assets/background.png">
+
+    
+    <img id="officeRight" class="officeRight" src="../Assets/right_normal.png">
+    <img id="officeLeft" class="officeLeft" src="../Assets/left_normal.png">
+
+    <div id="Main">
+        
+        <img id="doorButtonL" class="doorButtonL" src="../Assets/left_door/door_off.png" onclick="doorFunction('Left');">
+        <img id="lightButtonL" class="lightButtonL" src="../Assets/left_door/light_off.png" onclick="lightFunction('Left');">
+
+        <img id="doorL" class="hidden" src="">
+        <img id="lightL" class="hidden" src="">
+
+        <img id="doorButtonR" class="doorButtonR" src="../Assets/right_door/door_off.png" onclick = "doorFunction('Right');">
+        <img id="lightButtonR" class="lightButtonR" src="../Assets/right_door/light_off.png" onclick="lightFunction('Right');">
+
+        <img id="doorR" class="hidden" src="">
+        <img id="lightR" class="hidden" src="">
+
+        <img id="GoldenFreddy" class="hidden" src="../Assets/Golden Freddy/gf_model.png">
+
+        <img id="fan" src="../Assets/fan_spin.gif" onclick="fanToggle();">
+
+        <div id="tablet" class="hidden">
+
+            <h1 id="power" class="hidden"> Power left: 100% </h1>
+            <h1 id="usage" class="hidden"> Power usage: x1 </h1>
+            <h1 id="heat" class="hidden"> 20∘ </h1>
+        
+            <h1 id="hour" class="hidden"> 12 AM </h1>
+            <h1 id="night" class="hidden"> NIGHT </br> ONE </h1>
+
+            <img id="static2" class="hidden" src="../Assets/static.gif">
+        
+            <input id="muteCall" class="hidden" type="button" value="mute call" onclick="muteCall();">
+
+        </div>
+
+        <div id="cameras" class="hidden">
+
+            <img id="dot" class="hidden" src="../Assets/record.png">
+
+            <img id="static" class="hidden" src="../Assets/static.gif">
+
+            <img id="line" class="hidden" src="../Assets/camera_line.png">
+
+            <img id="map" class="hidden" src="../Assets/cam1A.png">
+
+            <h1 id="camName" class="hidden"> Show Stage </h1>
+
+            <h1 id="disabled" class="hidden"> Video Unavaliable </br>   - Audio Only - </h1>
+
+            <input id="cam1A" class="hidden" type="button" value="1A" onclick="camChange('1A', 'Show Stage');">
+            <input id="cam1B" class="hidden" type="button" value="1B" onclick="camChange('1B', 'Dinning Room');">
+            <input id="cam1C" class="hidden" type="button" value="1C" onclick="camChange('1C', 'Pirate`s Cove');">
+            <input id="cam2A" class="hidden" type="button" value="2A" onclick="camChange('2A', 'Left Corridor');">
+            <input id="cam2B" class="hidden" type="button" value="2B" onclick="camChange('2B', 'Left Cubby');">
+            <input id="cam3" class="hidden" type="button" value="3" onclick="camChange('3', 'Closet');">
+            <input id="cam4A" class="hidden" type="button" value="4A" onclick="camChange('4A', 'Right Corridor');">
+            <input id="cam4B" class="hidden" type="button" value="4B" onclick="camChange('4B', 'Right Cubby');">
+            <input id="cam5" class="hidden" type="button" value="5" onclick="camChange('5', 'Parts and Services');">
+            <input id="cam6" class="hidden" type="button" value="6" onclick="camChange('6', 'Kitchen');">
+            <input id="cam7" class="hidden" type="button" value="7" onclick="camChange('7', 'Restroom');">
+        </div>
+    </div>
+    <img id="inOffice" class="hidden" src="../Assets/heat.png">
+    <img id="cameraToggle" src="../Assets/button.png" onmouseenter="cameraToggle();">
+    <img id="tabletToggle" src="../Assets/button_info.png" onmouseenter="tabletToggle();">
+
+    <img id="logo" src="../Assets/logo.png" onmouseenter="backgroundChange(); src='../Assets/logo_red.png'" onmouseleave="src='../Assets/logo.png'; backgroundChangeBack();">
+
+    <img src="../Assets/vader.png" class="freddyNose" onclick="freddyNoseSound();">
+
+    <img id="jumpscare" class="hidden" src="">
+
+    <input id="load" style="position: absolute; width: 150px; height: 70px;" type="button" value="AMONG US BUTTON" onclick="if (!amongus) loadJS(); else console.log('hello');">
+
+    <script>
+
+        var amongus = false;
+        function loadJS()
+        {
+        const java1 = document.createElement("script");
+        java1.setAttribute("src", "JavaScript/main.js");
+        document.body.appendChild(java1);
+        //------------------------------------------
+        const java2 = document.createElement("script");
+        java2.setAttribute("src", "JavaScript/animatronics.js");
+        document.body.appendChild(java2);
+        //------------------------------------------
+        const java3 = document.createElement("script");
+        java3.setAttribute("src", "JavaScript/variables.js");
+        document.body.appendChild(java3);
+        //------------------------------------------
+        const java4 = document.createElement("script");
+        java4.setAttribute("src", "JavaScript/cameras.js");
+        document.body.appendChild(java4);
+        //------------------------------------------
+        const java5 = document.createElement("script");
+        java5.setAttribute("src", "JavaScript/tablet.js");
+        document.body.appendChild(java5);
+        //------------------------------------------
+        const java6 = document.createElement("script");
+        java6.setAttribute("src", "JavaScript/toggles.js");
+        document.body.appendChild(java6);
+        //------------------------------------------
+        const java7 = document.createElement("script");
+        java7.setAttribute("src", "JavaScript/Bonnie the Bunny.js");
+        document.body.appendChild(java7);
+        //------------------------------------------
+        const java8 = document.createElement("script");
+        java8.setAttribute("src", "JavaScript/Freddy Fazbear.js");
+        document.body.appendChild(java8);
+        //------------------------------------------
+        const java9 = document.createElement("script");
+        java9.setAttribute("src", "JavaScript/Golden Freddy.js");
+        document.body.appendChild(java9);
+        //------------------------------------------
+        const java10 = document.createElement("script");
+        java10.setAttribute("src", "JavaScript/Foxy the Pirate Fox.js");
+        document.body.appendChild(java10);
+        //------------------------------------------
+        const java11 = document.createElement("script");
+        java11.setAttribute("src", "JavaScript/Chica the Chicken.js");
+        document.body.appendChild(java11);
+        //------------------------------------------
+
+        amongus = true;
+    }
+
+    </script>
+</body>
+</html>

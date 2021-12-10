@@ -1,0 +1,83 @@
+.night
+{
+    filter: invert(10%);
+    font-size: 30px;
+    top: 375px;
+    margin-left: 285px;
+    position: absolute;
+    color: white;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-family: hours;
+}
+.usage
+{
+    filter: invert(10%);
+    top: 500px;
+    margin-left: 72px;
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-family: FNaF03;
+}
+.hour
+{
+    filter: invert(10%);
+    font-size: 90px;
+    top: 320px;
+    margin-left: 1px;
+    position: absolute;
+    color: white;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-family: hours;
+}
+.power
+{
+    filter: invert(10%);
+    top: 460px;
+    margin-left: 70px;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-family: FNaF03;
+}
+.muteCall
+{
+    filter: invert(10%);
+    opacity: 50%;
+    border-radius: 10px;
+    top: 600px;
+    margin-left: 80px;
+    border: none;
+    outline: solid #bdbdbd 2px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 245px;
+    height: 40px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 30px;
+    font-family: dashedFont;
+    transition: 0.5s;
+}
+.muteCall:hover
+{
+    opacity: 100%;
+    transition: 0.5s;
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+.heat
+{
+    bottom: 150px;
+    margin-left: 0px;
+    position: absolute;
+    font-size: 90px;
+    color: white;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    font-family: FNaF03;
+}

@@ -1,0 +1,312 @@
+.map
+{
+    margin-left: 1030px;
+    top: 170px;
+    width: 500px;
+    position: absolute;
+    opacity: 80%;
+}
+#camName
+{
+    top: 35px;
+    opacity: 80%;
+    position: absolute;
+    color: white;
+    font-family: dashedFont;
+    font-size: 35px;
+    margin-left: 120px;
+    /*text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;*/
+    text-shadow: 0 0 10px #000;
+}
+#dot
+{
+    position: absolute;
+    top: 50px;
+    margin-left: 50px;
+}
+#cam1A
+{
+    top: 220px;
+    margin-left: 1180px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam1B
+{
+    top: 420px;
+    margin-left: 1260px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam1C
+{
+    top: 400px;
+    margin-left: 1080px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam2A
+{
+    top: 550px;
+    margin-left: 1170px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam2B
+{
+    top: 600px;
+    margin-left: 1170px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam4A
+{
+    top: 550px;
+    margin-left: 1288px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam4B
+{
+    top: 600px;
+    margin-left: 1288px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam3
+{
+    top: 490px;
+    margin-left: 1080px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam5
+{
+    top: 310px;
+    margin-left: 1050px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam6
+{
+    top: 500px;
+    margin-left: 1420px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam7
+{
+    top: 300px;
+    margin-left: 1400px;
+    border: none;
+    outline: solid #bdbdbd 3px;
+    position: absolute;
+    background: #505050;
+    color: #bdbdbd;
+    width: 50px;
+    height: 28px;
+    text-anchor: start;
+    text-align: left;
+    padding-top: 3px;
+    font-size: 20px;
+    font-family: dashedFont2;
+}
+#cam1A:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam1B:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam1C:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam2A:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam2B:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam3:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam4A:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam4B:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam5:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam6:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+#cam7:hover
+{
+    outline: solid #757575 2px;
+    background: #252525;
+    color: #a5a5a5;
+}
+.static
+{
+    margin-left: -100px;
+    position: absolute;
+    width: 3000px;
+    height: 1000px;
+}
+.static2
+{
+    margin-left: -20px;
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+}
+.line
+{
+    opacity: 30%;
+    position: absolute;
+    width: 1560px;
+    height: 680px;
+}
+.disabled
+{
+    top: 50px;
+    opacity: 80%;
+    position: absolute;
+    color: white;
+    font-family: dashedFont2;
+    font-size: 50px;
+    margin-left: 80px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+

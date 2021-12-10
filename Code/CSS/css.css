@@ -1,0 +1,139 @@
+.hidden
+{
+    display: none;
+}
+body
+{
+    overflow: hidden;
+}
+#Main
+{
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: auto;
+    height: 720px;
+    width: 1600px;
+    top: 20px;
+    outline: solid rgb(59, 55, 55) 5px;
+}
+.doorButtonL
+{
+    display: block;
+    position: absolute;
+    width: 80px;
+    top: 220px;
+}
+.lightButtonL
+{
+    display: block;
+    position: absolute;
+    width: 80px;
+    top: 331px;
+}
+.doorL
+{
+    display: block;
+    position: absolute;
+    width: 220px;
+    top: 10px;
+    margin-left: 73px;
+}
+#logo
+{
+    top: 13px;
+    margin-left: 1630px;
+    position: absolute;
+    width: 233px;
+}
+.freddyNose
+{
+    opacity: 0;
+    position: absolute;
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    margin-left: 683px;
+    top: 253px;
+}
+#fan
+{
+    position: absolute;
+    margin-left: 780px;
+    top: 303px;
+}
+.doorButtonR
+{
+    display: block;
+    position: absolute;
+    width: 80px;
+    top: 220px;
+    margin-left: 1500px;
+}
+.lightButtonR
+{
+    display: block;
+    position: absolute;
+    width: 80px;
+    top: 331px;
+    margin-left: 1500px;
+}
+.doorR
+{
+    display: block;
+    position: absolute;
+    width: 250px;
+    margin-left: 1275px;
+}
+.officeLeft
+{
+    margin-left: 10px;
+    top: 20px;
+    position: absolute;
+}
+.officeRight
+{
+    margin-left: 810px;
+    top: 20px;
+    position: absolute;
+}
+#cameraToggle
+{
+    opacity: 50%;
+    margin-left: 510px;
+    top: 655px;
+    position: absolute;
+}
+#tabletToggle
+{
+    opacity: 50%;
+    margin-left: 1530px;
+    top: 490px;
+    position: absolute;
+}
+.cameras
+{
+    position: absolute;
+    overflow: hidden;
+    background-image: url("../../Assets/1A.png");
+    border-radius: 50px;
+    outline: solid rgb(0, 2, 8) 20px;
+    height: 680px;
+    top: 20px;
+    margin-left: 20px;
+    width: 1560px;
+    position: absolute;
+}
+.tablet
+{
+    overflow: hidden;
+    background-image: url("../../Assets/fazbear_entertainment_msd.png");
+    margin-left: 1170px;
+    border-radius: 50px;
+    outline: solid rgb(0, 0, 2) 20px;
+    width: 400px;
+    height: 660px;
+    position: absolute;
+    top: 30px;
+}
