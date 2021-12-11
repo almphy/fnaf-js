@@ -51,54 +51,24 @@ let bonnieMove = () =>
             bb_cam_3 = false;
             bb_cam_5 = false;
 
-            if (camera)
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
+            if (camera) {
                 deep_steps.volume = 1;
                 deep_steps.play();
 
-                if (garble_random == 1)
+                if (cam_1B)
                 {
-                    garble01.play();
+                camChange('1B', 'Dinning Room');
                 }
-                else if (garble_random == 2)
-                {
-                    garble02.play();
-                }
-                else if (garble_random == 3)
-                {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () 
-                        {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
-                
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
             }
-            else
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
+            else {
 
+                if (cam_1B)
+                {
+                camChange('1B', 'Dinning Room');
+                }
                 deep_steps.volume = .2;
                 deep_steps.play();
-            }   
+            }
             break;
         case (2):
             bb_cam_2A = true;
@@ -108,54 +78,24 @@ let bonnieMove = () =>
             bb_cam_3 = false;
             bb_cam_5 = false;
 
-            if (camera)
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
+            if (camera) {
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1)
-                {
-                    garble01.play();
-                }
-                else if (garble_random == 2)
-                {
-                    garble02.play();
-                }
-                else if (garble_random == 3)
-                {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () 
-                        {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
                 
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
+                if (cam_2A)
+                {
+                camChange('2A', 'Left Corridor');
+                }
             }
-            else
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
+            else {
+                if (cam_2A)
+                {
+                camChange('2A', 'Left Corridor');
+                }
 
                 deep_steps.volume = .2;
                 deep_steps.play();
-            }       
+            }
             break;
         case (3):
             bb_cam_2B = true;
@@ -165,54 +105,24 @@ let bonnieMove = () =>
             bb_cam_3 = false;
             bb_cam_5 = false;
 
-            if (camera)
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
+            if (camera) {
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1)
-                {
-                    garble01.play();
-                }
-                else if (garble_random == 2)
-                {
-                    garble02.play();
-                }
-                else if (garble_random == 3)
-                {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () 
-                        {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
                 
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
+                if (cam_2B)
+                {
+                camChange('2B', 'Left Cubby');
+                }
             }
-            else
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
+            else {
+                if (cam_2B)
+                {
+                camChange('2B', 'Left Cubby');
+                }
 
                 deep_steps.volume = .2;
                 deep_steps.play();
-            }    
+            } 
             break;
         case (4):
             bb_cam_3 = true;
@@ -222,54 +132,25 @@ let bonnieMove = () =>
             bb_cam_2B = false;
             bb_cam_5 = false;
 
-            if (camera)
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
+            if (camera) {
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1)
-                {
-                    garble01.play();
-                }
-                else if (garble_random == 2)
-                {
-                    garble02.play();
-                }
-                else if (garble_random == 3)
-                {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () 
-                        {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
                 
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
+                if (cam_3)
+                {
+                camChange('3', 'Closet');
+                }
             }
-            else
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
+            else {
+                                
+                if (cam_3)
+                {
+                camChange('3', 'Closet');
+                }
 
                 deep_steps.volume = .2;
                 deep_steps.play();
-            }     
+            }  
             break;
         case (5):
             bb_cam_5 = true;
@@ -279,54 +160,24 @@ let bonnieMove = () =>
             bb_cam_2B = false;
             bb_cam_3 = false;
 
-            if (camera)
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
+            if (camera) {
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1)
-                {
-                    garble01.play();
-                }
-                else if (garble_random == 2)
-                {
-                    garble02.play();
-                }
-                else if (garble_random == 3)
-                {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () 
-                        {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10); 
                 
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
+                if (cam_5)
+                {
+                camChange('5', 'Parts and Services');
+                }
             }
-            else
-            {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+            else {
+                if (cam_5)
+                {
+                camChange('5', 'Parts and Services');
+                }
+                
                 deep_steps.volume = .2;
                 deep_steps.play();
-            }    
+            }  
             break;
     }
 };

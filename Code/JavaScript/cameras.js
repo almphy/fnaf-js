@@ -1,7 +1,24 @@
 //---- Cameras ----
 
+var current_camera;
+
+var camera_details =
+[
+    ["Show Stage", "1A"], // 0
+    ["Dinning Room", "1B"], // 1
+    ["Pirate`s Cove", "1C"], // 2
+    ["Left Corridor", "2A"], // 3
+    ["Left Cubby", "2B"], // 4
+    ["Right Corridor", "4A"], // 5
+    ["Right Cubby", "4B"], // 6
+    ["Closet", "3"], // 7
+    ["Parts and Services", "5"], // 8
+    ["Kitchen", "6"], // 9
+    ["Restroom", "7"] // 10
+];
+
 //- zmiana kamery -
-let camChange = (background, name) =>
+function camChange(background, name)
 {
     let random = Math.floor(Math.random(1, 25) * 25);
     let random02 = Math.floor(Math.random(1, 10) * 10);
@@ -29,6 +46,19 @@ let camChange = (background, name) =>
     if (background == "1A")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = true;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[0];
+
         if (bb_cam_1A && cc_cam_1A && ff_cam_1A)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}.png')`;
@@ -53,6 +83,19 @@ let camChange = (background, name) =>
     else if (background == "1B")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = true;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[1];
+
         if (bb_cam_1B && cc_cam_1B && ff_cam_1B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-all.png')`;
@@ -89,6 +132,19 @@ let camChange = (background, name) =>
     else if (background == "2A")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = true;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[3];
+
         if (bb_cam_2A)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-bonnie.png')`;
@@ -101,6 +157,19 @@ let camChange = (background, name) =>
     else if (background == "2B")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = true;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[4];
+
         if (bb_cam_2B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-bonnie.png')`;
@@ -113,6 +182,19 @@ let camChange = (background, name) =>
     else if (background == "3")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = true;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[7];
+
         if (bb_cam_3)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-bonnie.png')`;
@@ -125,6 +207,19 @@ let camChange = (background, name) =>
     else if (background == "5")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = true;
+        cam_7 = false;
+
+        current_camera = camera_details[8];
+
         if (bb_cam_5)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-bonnie.png')`;
@@ -137,6 +232,19 @@ let camChange = (background, name) =>
     else if (background == "4A")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = true;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[5];
+
         if (!ff_cam_4A && cc_cam_4A)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica.png')`;
@@ -157,6 +265,19 @@ let camChange = (background, name) =>
     else if (background == "4B")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = true;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[6];
+
         if (cc_cam_4B && !ff_cam_4B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica.png')`;
@@ -173,6 +294,19 @@ let camChange = (background, name) =>
     else if (background == "7")
     {
         cam_6 = false;
+        cam_1C = false;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = true;
+
+        current_camera = camera_details[10];
+
         if (cc_cam_7 && ff_cam_7)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-both.png')`;
@@ -190,14 +324,60 @@ let camChange = (background, name) =>
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}.png')`;
         }
     }
-    else if (background == "7")
+    else if (background == "6")
     {
         cam_6 = true;
+        cam_1C = false;
+        cam_1A = true;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[9];
+    }
+    else if (background == "1C")
+    {
+        cam_6 = false;
+        cam_1C = true;
+        cam_1A = false;
+        cam_1B = false;
+        cam_2A = false;
+        cam_2B = false;
+        cam_3 = false;
+        cam_4A = false;
+        cam_4B = false;
+        cam_5 = false;
+        cam_7 = false;
+
+        current_camera = camera_details[2];
+
+        if (fp_irritation == 1)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-one.png')`;
+        }
+        else if (fp_irritation == 2)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-two.png')`;
+        }
+        else if (fp_irritation == 3)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-three.png')`;
+        }
+        else
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}.png')`;
+        }
     }
     else
     {
         getEle("cameras").style.backgroundImage = `url('../Assets/${background}.png')`;
     }
+}
 
 
 /*- sekrety -
@@ -283,7 +463,7 @@ let camChange = (background, name) =>
     {
         getEle("cameras").style.backgroundImage = `url('../Assets/${background}.png')`;
     }*/
-};
+
 
 //- kropka znika -
 

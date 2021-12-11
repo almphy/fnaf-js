@@ -98,44 +98,19 @@ let chicaMove = () => {
             cc_kitchen04.load();
 
             if (camera) {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1) {
-                    garble01.play();
+                
+                if (cam_1B)
+                {
+                camChange('1B', 'Dinning Room');
                 }
-                else if (garble_random == 2) {
-                    garble02.play();
-                }
-                else if (garble_random == 3) {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
-
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
             }
             else {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+                if (cam_1B)
+                {
+                camChange('1B', 'Dinning Room');
+                }
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
@@ -150,6 +125,7 @@ let chicaMove = () => {
             cc_kitchen03.load();
             cc_kitchen04.pause();
             cc_kitchen04.load();
+
             cc_cam_1A = false;
             cc_cam_1B = false;
             cc_cam_4A = true;
@@ -158,44 +134,19 @@ let chicaMove = () => {
             cc_cam_7 = false;
 
             if (camera) {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1) {
-                    garble01.play();
+                
+                if (cam_4A)
+                {
+                camChange('4A', 'Right Corridor');
                 }
-                else if (garble_random == 2) {
-                    garble02.play();
-                }
-                else if (garble_random == 3) {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
-
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
             }
             else {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+                if (cam_4A)
+                {
+                camChange('4A', 'Right Corridor');
+                }
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
@@ -217,44 +168,19 @@ let chicaMove = () => {
             cc_cam_7 = false;
 
             if (camera) {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1) {
-                    garble01.play();
+                
+                if (cam_4B)
+                {
+                camChange('4B', 'Right Cubby');
                 }
-                else if (garble_random == 2) {
-                    garble02.play();
-                }
-                else if (garble_random == 3) {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
-
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
             }
             else {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+                if (cam_4B)
+                {
+                camChange('4B', 'Right Cubby');
+                }
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
@@ -287,44 +213,19 @@ let chicaMove = () => {
             }
 
             if (camera) {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1) {
-                    garble01.play();
+                
+                if (cam_6)
+                {
+                    camChange('6', 'Kitchen');
                 }
-                else if (garble_random == 2) {
-                    garble02.play();
-                }
-                else if (garble_random == 3) {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
-
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
             }
             else {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+                if (cam_6)
+                {
+                    camChange('6', 'Kitchen');
+                }
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
@@ -346,44 +247,19 @@ let chicaMove = () => {
             cc_cam_7 = true;
 
             if (camera) {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-                let static = 100;
-
-                getEle("static").className = "static";
-
                 deep_steps.volume = 1;
                 deep_steps.play();
-
-                if (garble_random == 1) {
-                    garble01.play();
+                
+                if (cam_7)
+                {
+                    camChange('7', 'Restroom');
                 }
-                else if (garble_random == 2) {
-                    garble02.play();
-                }
-                else if (garble_random == 3) {
-                    garble03.play();
-                }
-
-                getEle("static").style.opacity = `${static}%`;
-
-                setTimeout(() => {
-                    let inter = setInterval(
-                        function () {
-                            getEle("static").style.opacity = `${static}%`;
-                            static--;
-                        }, 10);
-
-                    setTimeout(() => {
-                        clearInterval(inter);
-                    }, 800);
-                }, 2000);
-
             }
             else {
-                getEle("map").src = "../Assets/map.png"
-                getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+                if (cam_7)
+                {
+                    camChange('7', 'Restroom');
+                }
                 deep_steps.volume = .2;
                 deep_steps.play();
             }

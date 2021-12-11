@@ -10,7 +10,7 @@ fp_song_1 = false;
 fp_song_2 = false;
 fp_song_3 = false;
 
-fp_irrotation = 0;
+fp_irritation = 0;
 
 let song_min = Math.ceil(1);
 let song_max = Math.floor(4);
@@ -35,6 +35,19 @@ setInterval(() => {
     
     if (camera)
     {
+        fp_pirate_song.volume = 1;
+    }
+    else
+    {
+        fp_pirate_song.volume = .1;
+    }
+
+}, 100);
+
+setInterval(() => {
+    
+    if (camera)
+    {
         music_box_01.volume = 1;
         music_box_02.volume = 1;
         music_box_03.volume = 1;
@@ -50,10 +63,14 @@ setInterval(() => {
 
 setInterval(() => {
     
-    if (fp_irrotation > 3)
+    if (fp_irritation > 3)
     {
-        fp_irrotation = 0;
-        getEle("foxyAnger").innerHTML = `Irrotation level: ${fp_irrotation}`;
+        fp_irritation = 0;
+        if (cam_1C)
+        {
+        camChange('1C', 'Pirate`s Cove');
+        }
+        getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
     }
 
 }, 100);
@@ -96,14 +113,18 @@ setInterval(() => {
     // current_song = Math.floor(Math.random() * (song_max - song_min)) + song_min;
 
     setTimeout(() => {
-        if (fp_irrotation == 0)
+        if (fp_irritation == 0)
         {
-            fp_irrotation++;
-            getEle("foxyAnger").innerHTML = `Irrotation level: ${fp_irrotation}`;
+            fp_irritation++;
+            if (cam_1C)
+            {
+            camChange('1C', 'Pirate`s Cove');
+            }
+            getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
         }
     }, 1000);
 
-    if (fp_irrotation == 1)
+    if (fp_irritation == 1)
     {
         if (!fp_song_1)
         {
@@ -113,12 +134,12 @@ setInterval(() => {
                 if (!fp_song_1)
                 {
                     jumpscare.play();
-                    getEle("jumpscare1").className = "jumpscare";
-                    getEle("jumpscare1").requestFullscreen();
+                    getEle("jumpscare4").className = "jumpscare";
+                    getEle("jumpscare4").requestFullscreen();
                     //getEle("jumpscare").src = "../Assets/Freddy/jumpscare.gif";
                     setTimeout(() => {
                         window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-                    }, 1300);
+                    }, 900);
                     return
                 }
                 else
@@ -131,13 +152,17 @@ setInterval(() => {
         else
         {
             setTimeout(() => {
-                fp_irrotation++;
-                getEle("foxyAnger").innerHTML = `Irrotation level: ${fp_irrotation}`;
+                fp_irritation++;
+                if (cam_1C)
+                {
+                camChange('1C', 'Pirate`s Cove');
+                }
+                getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
                 return
             }, 5000);
         }
     }
-    else if (fp_irrotation == 2)
+    else if (fp_irritation == 2)
     {
         if (!fp_song_2)
         {
@@ -147,12 +172,12 @@ setInterval(() => {
                 if (!fp_song_2)
                 {
                     jumpscare.play();
-                    getEle("jumpscare1").className = "jumpscare";
-                    getEle("jumpscare1").requestFullscreen();
+                    getEle("jumpscare4").className = "jumpscare";
+                    getEle("jumpscare4").requestFullscreen();
                     //getEle("jumpscare").src = "../Assets/Freddy/jumpscare.gif";
                     setTimeout(() => {
                         window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-                    }, 1300);
+                    }, 900);
                     return
                 }
                 else
@@ -165,13 +190,17 @@ setInterval(() => {
         else
         {
             setTimeout(() => {
-                fp_irrotation++;
-                getEle("foxyAnger").innerHTML = `Irrotation level: ${fp_irrotation}`;
+                fp_irritation++;
+                if (cam_1C)
+                {
+                camChange('1C', 'Pirate`s Cove');
+                }
+                getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
                 return
             }, 5000);
         }
     }
-    else if (fp_irrotation == 3)
+    else if (fp_irritation == 3)
     {
         if (!fp_song_3)
         {
@@ -185,7 +214,7 @@ setInterval(() => {
                     getEle("jumpscare4").requestFullscreen();
                     setTimeout(() => {
                         window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-                    }, 1000);
+                    }, 900);
                     return
                 }
                 else
@@ -198,8 +227,12 @@ setInterval(() => {
         else
         {
             setTimeout(() => {
-                fp_irrotation++;
-                getEle("foxyAnger").innerHTML = `Irrotation level: ${fp_irrotation}`;
+                fp_irritation++;
+                if (cam_1C)
+                {
+                camChange('1C', 'Pirate`s Cove');
+                }
+                getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
                 return
             }, 5000);
         }

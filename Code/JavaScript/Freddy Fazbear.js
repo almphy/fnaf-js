@@ -74,54 +74,24 @@ function freddyMove()
 
         ff_lullaby.pause();
         ff_laugh01.play();
-        if (camera)
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-            let static = 100;
-
-            getEle("static").className = "static";
-
+        if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-
-            if (garble_random == 1)
-            {
-                garble01.play();
-            }
-            else if (garble_random == 2)
-            {
-                garble02.play();
-            }
-            else if (garble_random == 3)
-            {
-                garble03.play();
-            }
-
-            getEle("static").style.opacity = `${static}%`;
-
-            setTimeout(() => {
-                let inter = setInterval(
-                    function () 
-                    {
-                        getEle("static").style.opacity = `${static}%`;
-                        static--;
-                    }, 10);
             
-                setTimeout(() => {
-                    clearInterval(inter);
-                }, 800);
-            }, 2000);
-
+            if (cam_1B)
+            {
+            camChange('1B', 'Dinning Room');
+            }
         }
-        else
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
+        else {
+            if (cam_1B)
+            {
+            camChange('1B', 'Dinning Room');
+            }
 
             ff_run.volume = .2;
             ff_run.play();
-        }   
+        }  
     }
     else if (ff_cam_1B)
     {
@@ -134,50 +104,20 @@ function freddyMove()
 
         ff_lullaby.pause();
         ff_laugh02.play();
-        if (camera)
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-            let static = 100;
-
-            getEle("static").className = "static";
-
+        if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-
-            if (garble_random == 1)
-            {
-                garble01.play();
-            }
-            else if (garble_random == 2)
-            {
-                garble02.play();
-            }
-            else if (garble_random == 3)
-            {
-                garble03.play();
-            }
-
-            getEle("static").style.opacity = `${static}%`;
-
-            setTimeout(() => {
-                let inter = setInterval(
-                    function () 
-                    {
-                        getEle("static").style.opacity = `${static}%`;
-                        static--;
-                    }, 10);
             
-                setTimeout(() => {
-                    clearInterval(inter);
-                }, 800);
-            }, 2000);
-
+            if (cam_7)
+            {
+            camChange('7', 'Restroom');
+            }
         }
-        else
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
+        else {
+            if (cam_7)
+            {
+            camChange('7', 'Restroom');
+            }
 
             ff_run.volume = .2;
             ff_run.play();
@@ -194,54 +134,23 @@ function freddyMove()
 
         ff_lullaby.play();
         ff_laugh03.play();
-        if (camera)
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-            let static = 100;
-
-            getEle("static").className = "static";
-
+        if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-
-            if (garble_random == 1)
-            {
-                garble01.play();
-            }
-            else if (garble_random == 2)
-            {
-                garble02.play();
-            }
-            else if (garble_random == 3)
-            {
-                garble03.play();
-            }
-
-            getEle("static").style.opacity = `${static}%`;
-
-            setTimeout(() => {
-                let inter = setInterval(
-                    function () 
-                    {
-                        getEle("static").style.opacity = `${static}%`;
-                        static--;
-                    }, 10);
             
-                setTimeout(() => {
-                    clearInterval(inter);
-                }, 800);
-            }, 2000);
-
+            if (cam_6)
+            {
+            camChange('6', 'Kitchen');
+            }
         }
-        else
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+        else {
+            if (cam_6)
+            {
+            camChange('6', 'Kitchen');
+            }
             ff_run.volume = .2;
             ff_run.play();
-        }   
+        }  
     }
     else if (ff_cam_6)
     {
@@ -254,54 +163,23 @@ function freddyMove()
 
         ff_lullaby.pause();
         ff_laugh01.play();
-        if (camera)
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-            let static = 100;
-
-            getEle("static").className = "static";
-
+        if (camera) {
             ff_run.volume = 1;
             ff_run.play();
 
-            if (garble_random == 1)
+            if (cam_4A)
             {
-                garble01.play();
+            camChange('4A', 'Right Corridor');
             }
-            else if (garble_random == 2)
-            {
-                garble02.play();
-            }
-            else if (garble_random == 3)
-            {
-                garble03.play();
-            }
-
-            getEle("static").style.opacity = `${static}%`;
-
-            setTimeout(() => {
-                let inter = setInterval(
-                    function () 
-                    {
-                        getEle("static").style.opacity = `${static}%`;
-                        static--;
-                    }, 10);
-            
-                setTimeout(() => {
-                    clearInterval(inter);
-                }, 800);
-            }, 2000);
-
         }
-        else
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+        else {
+            if (cam_4A)
+            {
+            camChange('4A', 'Right Corridor');
+            }
             ff_run.volume = .2;
             ff_run.play();
-        }   
+        }  
     }
     else if (ff_cam_4A)
     {
@@ -314,54 +192,23 @@ function freddyMove()
 
         ff_lullaby.pause();
         ff_laugh02.play();
-        if (camera)
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-            let static = 100;
-
-            getEle("static").className = "static";
-
+        if (camera) {
             ff_run.volume = 1;
             ff_run.play();
 
-            if (garble_random == 1)
+            if (cam_4B)
             {
-                garble01.play();
+            camChange('4B', 'Right Cubby');
             }
-            else if (garble_random == 2)
-            {
-                garble02.play();
-            }
-            else if (garble_random == 3)
-            {
-                garble03.play();
-            }
-
-            getEle("static").style.opacity = `${static}%`;
-
-            setTimeout(() => {
-                let inter = setInterval(
-                    function () 
-                    {
-                        getEle("static").style.opacity = `${static}%`;
-                        static--;
-                    }, 10);
-            
-                setTimeout(() => {
-                    clearInterval(inter);
-                }, 800);
-            }, 2000);
-
         }
-        else
-        {
-            getEle("map").src = "../Assets/map.png"
-            getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
-
+        else {
+            if (cam_4B)
+            {
+            camChange('4B', 'Right Cubby');
+            }
             ff_run.volume = .2;
             ff_run.play();
-        }   
+        }  
     }
     else if (ff_cam_4B)
     {
