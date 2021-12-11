@@ -164,6 +164,7 @@ function freddyMove()
         ff_cam_6 = false;
         ff_cam_7 = false;
 
+        camChange(current_camera[1], current_camera[0]);
         bruh = setInterval(() => {
             freddyDoorFunction();
         }, 100);

@@ -208,7 +208,7 @@ function camChange(background, name)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica.png')`;
         } 
-        if (!cc_cam_4B && ff_cam_4B)
+        if (ff_cam_4B && !cc_cam_4B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-freddy.png')`;
         } 
