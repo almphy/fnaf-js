@@ -181,12 +181,11 @@ setInterval(() => {
                 if (!fp_song_3)
                 {
                     jumpscare.play();
-                    getEle("jumpscare1").className = "jumpscare";
-                    getEle("jumpscare1").requestFullscreen();
-                    //getEle("jumpscare").src = "../Assets/Freddy/jumpscare.gif";
+                    getEle("jumpscare4").className = "jumpscare";
+                    getEle("jumpscare4").requestFullscreen();
                     setTimeout(() => {
                         window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-                    }, 1300);
+                    }, 1000);
                     return
                 }
                 else

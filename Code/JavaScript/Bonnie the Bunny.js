@@ -384,7 +384,7 @@ function bonnieDoorFunction()
             //getEle("jumpscare").src = "../Assets/Bonnie/jumpscare.gif";
             setTimeout(() => {
                 window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-            }, 1400);
+            }, 1000);
             return
         }
         else if (bb_please > bb_anger)

@@ -435,7 +435,7 @@ function chicaDoorFunction() {
             getEle("jumpscare2").requestFullscreen();
             setTimeout(() => {
                 window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-            }, 1500);
+            }, 1000);
             return
         }
         else if (cc_please > cc_anger) {
@@ -452,12 +452,12 @@ function chicaDoorFunction() {
 }
 
 //- sprawdzanie czy bonnie jest przy drzwiach -
-// setInterval(() => {
-//     if (chica_door == true) {
-//         chicaDoorFunction();
-//         return
-//     }
-//     else {
-//         return
-//     }
-// }, 100);
+setInterval(() => {
+    if (chica_door == true) {
+        chicaDoorFunction();
+        return
+    }
+    else {
+        return
+    }
+}, 100);
