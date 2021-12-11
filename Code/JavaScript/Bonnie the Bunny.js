@@ -380,6 +380,7 @@ function bonnieDoorFunction()
         {
             jumpscare.play();
             getEle("jumpscare3").className = "jumpscare";
+            getEle("jumpscare3").requestFullscreen();
             //getEle("jumpscare").src = "../Assets/Bonnie/jumpscare.gif";
             setTimeout(() => {
                 window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";

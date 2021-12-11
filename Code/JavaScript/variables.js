@@ -48,10 +48,6 @@ night_1_call = new Audio("../Audio/voiceover1c.wav");
 //- cameras \/ tablets -
 stinger = new Audio("../Audio/windowscare.wav");
 camera_move = new Audio("../Audio/camera_move.wav");
-music_box_01 = new Audio("../Audio/music_box_01.mp3");
-music_box_02 = new Audio("../Audio/music_box_02.mp3");
-music_box_03 = new Audio("../Audio/music_box_03.mp3");
-music_box_04 = new Audio("../Audio/music_box_04.mp3");
 camera_open = new Audio("../Audio/camera_open.wav");
 camera_close = new Audio("../Audio/camera_close.wav");
 ad_music = new Audio("../Audio/ad_music.mp3");
@@ -67,11 +63,6 @@ ambiance01 = new Audio("../Audio/camera_move.wav");
 ambiance03 = new Audio("../Audio/camera_move.wav");
 circus_organs = new Audio("../Audio/camera_move.wav");
 fnaf2_alarm = new Audio("../Audio/camera_move.wav");
-
-//- Foxy the Pirate Fox -
-fp_pirate_song = new Audio("../Audio/gf_laugh.wav");
-fp_hallway_run = new Audio("../Audio/gf_laugh.wav");
-fp_banging = new Audio("../Audio/gf_laugh.wav");
 
 //- Golden Freddy -
 gf_laugh = new Audio("../Audio/gf_laugh.wav");

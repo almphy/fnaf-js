@@ -309,4 +309,92 @@
     margin-left: 80px;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
-
+.musicButton1
+{
+    top: 450px;
+    margin-left: 80px;
+    border: none;
+    outline: solid white 3px;
+    position: absolute;
+    background: transparent;
+    color: white;
+    width: 50px;
+    height: 40px;
+    text-align: left;
+    font-size: 30px;
+    font-family: FNaF03;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.musicButton1:hover
+{
+    outline: solid white 4.5px;
+    background: black;
+    color: white;
+    width: 100px;
+}
+.musicButton2
+{
+    top: 500px;
+    margin-left: 80px;
+    border: none;
+    outline: solid white 3px;
+    position: absolute;
+    background: transparent;
+    color: white;
+    width: 65px;
+    height: 40px;
+    text-align: left;
+    font-size: 30px;
+    font-family: FNaF03;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.musicButton2:hover
+{
+    outline: solid white 4.5px;
+    background: black;
+    color: white;
+    width: 115px;
+}
+.musicButton3
+{
+    top: 550px;
+    margin-left: 80px;
+    border: none;
+    outline: solid white 3px;
+    position: absolute;
+    background: transparent;
+    color: white;
+    width: 80px;
+    height: 40px;
+    text-align: left;
+    font-size: 30px;
+    font-family: FNaF03;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.musicButton3:hover
+{
+    outline: solid white 4.5px;
+    background: black;
+    color: white;
+    width: 130px;
+}
+.music
+{
+    position: absolute;
+    top: 370px;
+    margin-left: 80px;
+    color: white;
+    font-family: FNaF03;
+    font-size: 40px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.foxyAnger
+{
+    position: absolute;
+    top: 570px;
+    margin-left: 80px;
+    color: white;
+    font-family: FNaF03;
+    font-size: 40px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}

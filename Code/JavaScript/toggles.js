@@ -32,6 +32,12 @@ let cameraToggle = () =>
         getEle("cam6").className = "cam6";
         getEle("cam7").className = "cam7";
         getEle("static").className = "static";
+
+        getEle("music").className = "music";
+        getEle("foxyAnger").className = "foxyAnger";
+        getEle("musicButton1").className = "musicButton1";
+        getEle("musicButton2").className = "musicButton2";
+        getEle("musicButton3").className = "musicButton3";
         camera_open.play();
         camera = true;
         let inter = setInterval(
@@ -68,6 +74,12 @@ let cameraToggle = () =>
         getEle("cam5").className = "hidden";
         getEle("cam6").className = "hidden";
         getEle("cam7").className = "hidden";
+
+        getEle("music").className = "hidden";
+        getEle("foxyAnger").className = "hidden";
+        getEle("musicButton1").className = "hidden";
+        getEle("musicButton2").className = "hidden";
+        getEle("musicButton3").className = "hidden";
         camera_close.play();
         camera_open.pause();
         camera_open.load();

@@ -93,5 +93,37 @@ function emptyFunction()
 
 };
 
+function buttonChange(ez)
+{
+    if (ez === "one")
+    {
+        getEle("musicButton1").value = "one <<";
+    }
+    else if (ez ==="two")
+    {
+        getEle("musicButton2").value = "two <<";
+    }
+    else if (ez ==="three")
+    {
+        getEle("musicButton3").value = "three <<";
+    }
+}
+
+function buttonChangeBack(ez)
+{
+    if (ez === "one")
+    {
+        getEle("musicButton1").value = "one";
+    }
+    else if (ez ==="two")
+    {
+        getEle("musicButton2").value = "two";
+    }
+    else if (ez ==="three")
+    {
+        getEle("musicButton3").value = "three";
+    }
+}
+
 localStorage.setItem("nightSave", night);
 console.log(localStorage.getItem("nightSave"));

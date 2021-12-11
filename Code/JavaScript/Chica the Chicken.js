@@ -46,6 +46,35 @@ cc_kitchen04.loop = true;
 
 cc_stinger = new Audio("../Audio/windowscare.wav");
 
+setInterval(() => { 
+    
+    if (camera)
+    {
+        if (cam_6)
+        {
+            cc_kitchen01.volume = 1;
+            cc_kitchen02.volume = 1;
+            cc_kitchen03.volume = 1;
+            cc_kitchen04.volume = 1;
+        }
+        else
+        {
+            cc_kitchen01.volume = .2;
+            cc_kitchen02.volume = .2;
+            cc_kitchen03.volume = .2;
+            cc_kitchen04.volume = .2;
+        }
+    }
+    else
+    {
+        cc_kitchen01.volume = .05;
+        cc_kitchen02.volume = .05;
+        cc_kitchen03.volume = .0505;
+        cc_kitchen04.volume = .05;
+    }
+
+}, 100);
+
 let chicaMove = () => {
     cc_camera = Math.floor(Math.random() * (bb_camera_max - bb_camera_min)) + bb_camera_min;
     garble_random = Math.floor(Math.random() * (sound_max - sound_min)) + sound_min;
@@ -402,8 +431,8 @@ function chicaDoorFunction() {
 
         if (cc_anger > cc_please) {
             jumpscare.play();
-            getEle("jumpscare").className = "jumpscare";
-            getEle("jumpscare").src = "../Assets/Bonnie/jumpscare.gif";
+            getEle("jumpscare2").className = "jumpscare";
+            getEle("jumpscare2").requestFullscreen();
             setTimeout(() => {
                 window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
             }, 1500);

@@ -63,7 +63,11 @@
 
             <h1 id="camName" class="hidden"> Show Stage </h1>
 
-            <h1 id="disabled" class="hidden"> Video Unavaliable </br>   - Audio Only - </h1>
+            <h1 id="music" class="hidden">Music:</h1>
+            <input id="musicButton1" class="hidden" type="button" value="one" onclick="foxyLullaby('one');" onmouseenter="buttonChange('one')" onmouseleave="buttonChangeBack('one')"> 
+            <input id="musicButton2" class="hidden" type="button" value="two" onclick="foxyLullaby('two');" onmouseenter="buttonChange('two')" onmouseleave="buttonChangeBack('two')">
+            <input id="musicButton3" class="hidden" type="button" value="three" onclick="foxyLullaby('three');" onmouseenter="buttonChange('three')" onmouseleave="buttonChangeBack('three')">
+            <h1 id="foxyAnger" class="hidden">Irrotation level: 0</h1>
 
             <input id="cam1A" class="hidden" type="button" value="1A" onclick="camChange('1A', 'Show Stage');">
             <input id="cam1B" class="hidden" type="button" value="1B" onclick="camChange('1B', 'Dinning Room');">
@@ -87,8 +91,9 @@
     <img src="../Assets/vader.png" class="freddyNose" onclick="freddyNoseSound();">
 
     <img id="jumpscare1" class="hidden" src="../Assets/Freddy/f_jumpscarew.png">
-    <img id="jumpscare2" class="hidden" src="../Assets/kafka.png">
+    <img id="jumpscare2" class="hidden" src="../Assets/Chica/jumpscare.png">
     <img id="jumpscare3" class="hidden" src="../Assets/Bonnie/jumpscare.gif">
+    <img id="jumpscare4" class="hidden" src="../Assets/Foxy/jumpscare.gif">
 
     <input id="load" style="position: absolute; width: 150px; height: 70px;" type="button" value="AMONG US BUTTON" onclick="if (!amongus) loadJS(); else console.log('hello');">
 
