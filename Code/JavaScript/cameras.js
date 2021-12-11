@@ -17,9 +17,25 @@ var camera_details =
     ["Restroom", "7"] // 10
 ];
 
+
+
 //- zmiana kamery -
 function camChange(background, name)
 {
+    camera_switch = new Audio("../Audio/camera_switch.wav");
+    setInterval(() => {
+        if (camera)
+        {
+            camera_switch.volume = 1;
+        }
+        else
+        {
+            camera_switch.volume = 0;
+        }
+    }, 10);
+
+    camera_switch.load();
+    camera_switch.play();
     let random = Math.floor(Math.random(1, 25) * 25);
     let random02 = Math.floor(Math.random(1, 10) * 10);
 
@@ -28,8 +44,6 @@ function camChange(background, name)
     let static = 100;
 
     getEle("map").src = `../Assets/cam${background}.png`
-    camera_switch = new Audio("../Audio/camera_switch.wav");
-    camera_switch.play();
     getEle("static").className = "static";
 
     let inter = setInterval(
@@ -45,19 +59,8 @@ function camChange(background, name)
 
     if (background == "1A")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = true;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[0];
+        cam_6 = false;
 
         if (bb_cam_1A && cc_cam_1A && ff_cam_1A)
         {
@@ -82,19 +85,8 @@ function camChange(background, name)
     }
     else if (background == "1B")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = true;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[1];
+        cam_6 = false;
 
         if (bb_cam_1B && cc_cam_1B && ff_cam_1B)
         {
@@ -131,19 +123,8 @@ function camChange(background, name)
     }
     else if (background == "2A")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = true;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[3];
+        cam_6 = false;
 
         if (bb_cam_2A)
         {
@@ -156,19 +137,8 @@ function camChange(background, name)
     }
     else if (background == "2B")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = true;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[4];
+        cam_6 = false;
 
         if (bb_cam_2B)
         {
@@ -181,19 +151,8 @@ function camChange(background, name)
     }
     else if (background == "3")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = true;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[7];
+        cam_6 = false;
 
         if (bb_cam_3)
         {
@@ -206,19 +165,8 @@ function camChange(background, name)
     }
     else if (background == "5")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = true;
-        cam_7 = false;
-
         current_camera = camera_details[8];
+        cam_6 = false;
 
         if (bb_cam_5)
         {
@@ -231,19 +179,8 @@ function camChange(background, name)
     }
     else if (background == "4A")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = true;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[5];
+        cam_6 = false;
 
         if (!ff_cam_4A && cc_cam_4A)
         {
@@ -264,19 +201,8 @@ function camChange(background, name)
     }
     else if (background == "4B")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = true;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[6];
+        cam_6 = false;
 
         if (cc_cam_4B && !ff_cam_4B)
         {
@@ -286,6 +212,10 @@ function camChange(background, name)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-freddy.png')`;
         } 
+        if (cc_cam_4B && ff_cam_4B)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-both.png')`;
+        } 
         else
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}.png')`;
@@ -293,19 +223,8 @@ function camChange(background, name)
     }
     else if (background == "7")
     {
-        cam_6 = false;
-        cam_1C = false;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = true;
-
         current_camera = camera_details[10];
+        cam_6 = false;
 
         if (cc_cam_7 && ff_cam_7)
         {
@@ -327,33 +246,11 @@ function camChange(background, name)
     else if (background == "6")
     {
         cam_6 = true;
-        cam_1C = false;
-        cam_1A = true;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[9];
     }
     else if (background == "1C")
     {
         cam_6 = false;
-        cam_1C = true;
-        cam_1A = false;
-        cam_1B = false;
-        cam_2A = false;
-        cam_2B = false;
-        cam_3 = false;
-        cam_4A = false;
-        cam_4B = false;
-        cam_5 = false;
-        cam_7 = false;
-
         current_camera = camera_details[2];
 
         if (fp_irritation == 1)

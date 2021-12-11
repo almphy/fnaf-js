@@ -99,6 +99,7 @@ let doorFunction = (side) =>
         {
             if (bb_anger >= bb_half)
             {
+                error_aud.load();
                 error_aud.play();
                 left_door = false;
             }
@@ -110,6 +111,7 @@ let doorFunction = (side) =>
                 getEle("doorL").src = "../Assets/left_door_close.gif";
                 getEle("doorButtonL").src = "../Assets/left_door/door_on.png";
                 getEle("doorL").className = "doorL";
+                door_sound.load();
                 door_sound.play();
                 bb_guitar.volume = 0.005;
                 setTimeout(
@@ -123,6 +125,7 @@ let doorFunction = (side) =>
         {
             if (bb_anger >= bb_half)
             {
+                error_aud.load();
                 error_aud.play();
                 left_door = false;
             }
@@ -130,6 +133,7 @@ let doorFunction = (side) =>
             {
                 getEle("usage").innerHTML = `Power usage: x${power_usage - 1}`;
                 power_usage = power_usage - 1;
+                door_sound.load();
                 door_sound.play();
                 left_door = false;
                 bb_guitar.volume = 0.025;
@@ -150,6 +154,7 @@ let doorFunction = (side) =>
         {
             if (cc_anger >= cc_half)
             {
+                error_aud.load();
                 error_aud.play();
                 right_door = false;
             }
@@ -161,6 +166,7 @@ let doorFunction = (side) =>
                getEle("doorR").src = "../Assets/right_door_close.gif";
                getEle("doorButtonR").src = "../Assets/right_door/door_on.png";
                getEle("doorR").className = "doorR";
+               door_sound.load();
                door_sound.play();
                setTimeout(
                function()
@@ -173,6 +179,7 @@ let doorFunction = (side) =>
         {
             if (cc_anger >= cc_half)
             {
+                error_aud.load();
                 error_aud.play();
                 right_door = false;
             }
@@ -180,6 +187,7 @@ let doorFunction = (side) =>
             {
                 getEle("usage").innerHTML = `Power usage: x${power_usage - 1}`;
                 power_usage = power_usage - 1;
+                door_sound.load();
                 door_sound.play();
                 right_door = false;
                 getEle("doorR").src = "../Assets/right_door_open.gif";
@@ -334,9 +342,6 @@ let tabletToggle = () =>
     {
         cameraToggle();
     }
-
-    camera_open_tablet = new Audio("../Audio/tablet_close.wav");
-    tablet_on = new Audio("../Audio/tablet_on.wav");
     if (!tablet)
     {
         getEle("officeRight").style.filter = "blur(8px)";

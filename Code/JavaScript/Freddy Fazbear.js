@@ -24,20 +24,6 @@ let ff_move_max = Math.floor(40000);
 let ff_laugh_min = Math.ceil(1);
 let ff_laugh_max = Math.floor(4);
 
-//- audio -
-ff_laugh01 = new Audio("../Audio/freddy01.wav");
-
-ff_laugh02 = new Audio("../Audio/freddy02.wav");
-
-ff_laugh03 = new Audio("../Audio/freddy03.wav");
-
-ff_lullaby = new Audio("../Audio/music box.wav");
-ff_lullaby.loop = true;
-ff_lullaby.volume = .05
-
-ff_run = new Audio("../Audio/freddy_run.wav");
-ff_run.volume = 1;
-
 //- dupa -
 
 setInterval(() => {
@@ -77,21 +63,13 @@ function freddyMove()
         if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-            
-            if (cam_1B)
-            {
-            camChange('1B', 'Dinning Room');
-            }
         }
         else {
-            if (cam_1B)
-            {
-            camChange('1B', 'Dinning Room');
-            }
-
             ff_run.volume = .2;
             ff_run.play();
         }  
+
+        camChange(current_camera[1], current_camera[0]);
     }
     else if (ff_cam_1B)
     {
@@ -107,21 +85,12 @@ function freddyMove()
         if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-            
-            if (cam_7)
-            {
-            camChange('7', 'Restroom');
-            }
         }
         else {
-            if (cam_7)
-            {
-            camChange('7', 'Restroom');
-            }
-
             ff_run.volume = .2;
             ff_run.play();
         }   
+        camChange(current_camera[1], current_camera[0]);
     }
     else if (ff_cam_7)
     {
@@ -137,20 +106,12 @@ function freddyMove()
         if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-            
-            if (cam_6)
-            {
-            camChange('6', 'Kitchen');
-            }
         }
         else {
-            if (cam_6)
-            {
-            camChange('6', 'Kitchen');
-            }
             ff_run.volume = .2;
             ff_run.play();
         }  
+        camChange(current_camera[1], current_camera[0]);
     }
     else if (ff_cam_6)
     {
@@ -166,20 +127,12 @@ function freddyMove()
         if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-
-            if (cam_4A)
-            {
-            camChange('4A', 'Right Corridor');
-            }
         }
         else {
-            if (cam_4A)
-            {
-            camChange('4A', 'Right Corridor');
-            }
             ff_run.volume = .2;
             ff_run.play();
         }  
+        camChange(current_camera[1], current_camera[0]);
     }
     else if (ff_cam_4A)
     {
@@ -195,20 +148,12 @@ function freddyMove()
         if (camera) {
             ff_run.volume = 1;
             ff_run.play();
-
-            if (cam_4B)
-            {
-            camChange('4B', 'Right Cubby');
-            }
         }
         else {
-            if (cam_4B)
-            {
-            camChange('4B', 'Right Cubby');
-            }
             ff_run.volume = .2;
             ff_run.play();
         }  
+        camChange(current_camera[1], current_camera[0]);
     }
     else if (ff_cam_4B)
     {

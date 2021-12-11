@@ -15,20 +15,6 @@ fp_irritation = 0;
 let song_min = Math.ceil(1);
 let song_max = Math.floor(4);
 
-fp_pirate_song = new Audio("../Audio/pirate_song.wav");
-
-music_box_01 = new Audio("../Audio/music_box_01.mp3");
-music_box_01.loop = true;
-music_box_01.volume = .2;
-
-music_box_02 = new Audio("../Audio/music_box_02.mp3");
-music_box_02.loop = true;
-music_box_02.volume = .2;
-
-music_box_03 = new Audio("../Audio/music_box_03.mp3");
-music_box_03.loop = true;
-music_box_03.volume = .2;  
-
 //- ai -
 
 setInterval(() => {
@@ -66,10 +52,7 @@ setInterval(() => {
     if (fp_irritation > 3)
     {
         fp_irritation = 0;
-        if (cam_1C)
-        {
-        camChange('1C', 'Pirate`s Cove');
-        }
+        camChange(current_camera[1], current_camera[0]);
         getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
     }
 
@@ -116,10 +99,7 @@ setInterval(() => {
         if (fp_irritation == 0)
         {
             fp_irritation++;
-            if (cam_1C)
-            {
-            camChange('1C', 'Pirate`s Cove');
-            }
+            camChange(current_camera[1], current_camera[0]);
             getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
         }
     }, 1000);
@@ -153,10 +133,7 @@ setInterval(() => {
         {
             setTimeout(() => {
                 fp_irritation++;
-                if (cam_1C)
-                {
-                camChange('1C', 'Pirate`s Cove');
-                }
+                camChange(current_camera[1], current_camera[0]);
                 getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
                 return
             }, 5000);
@@ -191,10 +168,7 @@ setInterval(() => {
         {
             setTimeout(() => {
                 fp_irritation++;
-                if (cam_1C)
-                {
-                camChange('1C', 'Pirate`s Cove');
-                }
+                camChange(current_camera[1], current_camera[0]);
                 getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
                 return
             }, 5000);
@@ -228,10 +202,7 @@ setInterval(() => {
         {
             setTimeout(() => {
                 fp_irritation++;
-                if (cam_1C)
-                {
-                camChange('1C', 'Pirate`s Cove');
-                }
+                camChange(current_camera[1], current_camera[0]);
                 getEle("foxyAnger").innerHTML = `Irritation level: ${fp_irritation}`;
                 return
             }, 5000);

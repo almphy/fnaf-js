@@ -28,13 +28,6 @@ let bb_cam_5 = false;
 let bonnie_door = false;
 let bonnie_door_checker = false;
 
-//- audio -
-bb_guitar = new Audio('../Audio/bonnie_guitar.mp3');
-bb_guitar.loop = true;
-bb_guitar.volume = .025;
-
-bb_stinger = new Audio("../Audio/windowscare.wav");
-
 //- chodzenie bonniego -
 let bonnieMove = () =>
 {
@@ -53,22 +46,15 @@ let bonnieMove = () =>
 
             if (camera) {
                 deep_steps.volume = 1;
+                deep_steps.load();
                 deep_steps.play();
-
-                if (cam_1B)
-                {
-                camChange('1B', 'Dinning Room');
-                }
             }
             else {
-
-                if (cam_1B)
-                {
-                camChange('1B', 'Dinning Room');
-                }
                 deep_steps.volume = .2;
+                deep_steps.load();
                 deep_steps.play();
             }
+            camChange(current_camera[1], current_camera[0]);
             break;
         case (2):
             bb_cam_2A = true;
@@ -80,22 +66,15 @@ let bonnieMove = () =>
 
             if (camera) {
                 deep_steps.volume = 1;
+                deep_steps.load();
                 deep_steps.play();
-                
-                if (cam_2A)
-                {
-                camChange('2A', 'Left Corridor');
-                }
             }
             else {
-                if (cam_2A)
-                {
-                camChange('2A', 'Left Corridor');
-                }
-
                 deep_steps.volume = .2;
+                deep_steps.load();
                 deep_steps.play();
             }
+            camChange(current_camera[1], current_camera[0]);
             break;
         case (3):
             bb_cam_2B = true;
@@ -107,22 +86,15 @@ let bonnieMove = () =>
 
             if (camera) {
                 deep_steps.volume = 1;
+                deep_steps.load();
                 deep_steps.play();
-                
-                if (cam_2B)
-                {
-                camChange('2B', 'Left Cubby');
-                }
             }
             else {
-                if (cam_2B)
-                {
-                camChange('2B', 'Left Cubby');
-                }
-
                 deep_steps.volume = .2;
+                deep_steps.load();
                 deep_steps.play();
             } 
+            camChange(current_camera[1], current_camera[0]);
             break;
         case (4):
             bb_cam_3 = true;
@@ -134,23 +106,15 @@ let bonnieMove = () =>
 
             if (camera) {
                 deep_steps.volume = 1;
+                deep_steps.load();
                 deep_steps.play();
-                
-                if (cam_3)
-                {
-                camChange('3', 'Closet');
-                }
             }
             else {
-                                
-                if (cam_3)
-                {
-                camChange('3', 'Closet');
-                }
-
                 deep_steps.volume = .2;
+                deep_steps.load();
                 deep_steps.play();
             }  
+            camChange(current_camera[1], current_camera[0]);
             break;
         case (5):
             bb_cam_5 = true;
@@ -162,22 +126,15 @@ let bonnieMove = () =>
 
             if (camera) {
                 deep_steps.volume = 1;
+                deep_steps.load();
                 deep_steps.play();
-                
-                if (cam_5)
-                {
-                camChange('5', 'Parts and Services');
-                }
             }
             else {
-                if (cam_5)
-                {
-                camChange('5', 'Parts and Services');
-                }
-                
                 deep_steps.volume = .2;
+                deep_steps.load();
                 deep_steps.play();
             }  
+            camChange(current_camera[1], current_camera[0]);
             break;
     }
 };
@@ -200,6 +157,7 @@ setInterval(() => {
 function bonnieDoorFunction()
 {
             deep_steps.volume = 1;
+            deep_steps.load();
         deep_steps.play();
     bonnie_door_checker = true;
     min = Math.ceil(10000);

@@ -100,53 +100,32 @@
     <script>
 
         var amongus = false;
-        function loadJS()
-        {
-        const java1 = document.createElement("script");
-        java1.setAttribute("src", "JavaScript/main.js");
-        document.body.appendChild(java1);
-        //------------------------------------------
-        const java2 = document.createElement("script");
-        java2.setAttribute("src", "JavaScript/animatronics.js");
-        document.body.appendChild(java2);
-        //------------------------------------------
-        const java3 = document.createElement("script");
-        java3.setAttribute("src", "JavaScript/variables.js");
-        document.body.appendChild(java3);
-        //------------------------------------------
-        const java4 = document.createElement("script");
-        java4.setAttribute("src", "JavaScript/cameras.js");
-        document.body.appendChild(java4);
-        //------------------------------------------
-        const java5 = document.createElement("script");
-        java5.setAttribute("src", "JavaScript/tablet.js");
-        document.body.appendChild(java5);
-        //------------------------------------------
-        const java6 = document.createElement("script");
-        java6.setAttribute("src", "JavaScript/toggles.js");
-        document.body.appendChild(java6);
-        //------------------------------------------
-        const java7 = document.createElement("script");
-        java7.setAttribute("src", "JavaScript/Bonnie the Bunny.js");
-        document.body.appendChild(java7);
-        //------------------------------------------
-        const java8 = document.createElement("script");
-        java8.setAttribute("src", "JavaScript/Freddy Fazbear.js");
-        document.body.appendChild(java8);
-        //------------------------------------------
-        const java9 = document.createElement("script");
-        java9.setAttribute("src", "JavaScript/Golden Freddy.js");
-        document.body.appendChild(java9);
-        //------------------------------------------
-        const java10 = document.createElement("script");
-        java10.setAttribute("src", "JavaScript/Foxy the Pirate Fox.js");
-        document.body.appendChild(java10);
-        //------------------------------------------
-        const java11 = document.createElement("script");
-        java11.setAttribute("src", "JavaScript/Chica the Chicken.js");
-        document.body.appendChild(java11);
-        //------------------------------------------
 
+    var script_names =
+    [
+        "JavaScript/main.js","JavaScript/animatronics.js","JavaScript/variables.js",
+        "JavaScript/cameras.js","JavaScript/tablet.js","JavaScript/toggles.js",
+        "JavaScript/Bonnie the Bunny.js","JavaScript/Freddy Fazbear.js",
+        "JavaScript/Golden Freddy.js","JavaScript/Foxy the Pirate Fox.js",
+        "JavaScript/Chica the Chicken.js",
+    ];
+
+    var variable_names = [];
+
+    for (var i = 1; i < 12; i++)
+    {
+        variable_names[i] = `java${i}`;
+        console.log(variable_names[i]);
+    }
+
+    function loadJS()
+    {
+        for (var i = 0; i < 12; i++)
+        {
+            variable_names[i] = document.createElement("script");
+            variable_names[i].setAttribute("src", script_names[i]);
+            document.body.appendChild(variable_names[i]);
+        }
         amongus = true;
     }
 
