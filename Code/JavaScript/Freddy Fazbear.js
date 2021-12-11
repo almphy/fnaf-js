@@ -375,7 +375,7 @@ setInterval(() => {
     {
         freddyMove();
     }
-},  3000);
+},  10000);
 
 setInterval(() => {
     if (freddy_door == true)
@@ -410,15 +410,16 @@ function freddyDoorFunction()
         {
             jumpscare.play();
             getEle("jumpscare1").className = "jumpscare";
+            getEle("jumpscare1").requestFullscreen();
             //getEle("jumpscare").src = "../Assets/Freddy/jumpscare.gif";
             setTimeout(() => {
                 window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-            }, 1500);
+            }, 1300);
             return
         }
         else
         {
             return
         }
-    }, 1400);
+    }, 2000);
 }
