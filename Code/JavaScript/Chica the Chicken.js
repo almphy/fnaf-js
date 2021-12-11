@@ -423,12 +423,12 @@ function chicaDoorFunction() {
 }
 
 //- sprawdzanie czy bonnie jest przy drzwiach -
-setInterval(() => {
-    if (chica_door == true) {
-        chicaDoorFunction();
-        return
-    }
-    else {
-        return
-    }
-}, 100);
+// setInterval(() => {
+//     if (chica_door == true) {
+//         chicaDoorFunction();
+//         return
+//     }
+//     else {
+//         return
+//     }
+// }, 100);

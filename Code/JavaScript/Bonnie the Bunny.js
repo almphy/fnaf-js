@@ -379,11 +379,11 @@ function bonnieDoorFunction()
         if (bb_anger > bb_please)
         {
             jumpscare.play();
-            getEle("jumpscare").className = "jumpscare";
-            getEle("jumpscare").src = "../Assets/Bonnie/jumpscare.gif";
+            getEle("jumpscare3").className = "jumpscare";
+            //getEle("jumpscare").src = "../Assets/Bonnie/jumpscare.gif";
             setTimeout(() => {
                 window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-            }, 1500);
+            }, 1400);
             return
         }
         else if (bb_please > bb_anger)

@@ -42,6 +42,7 @@ ff_run.volume = 1;
 
 function freddyMove()
 {
+    garble_random = Math.floor(Math.random() * (sound_max - sound_min)) + sound_min;
     if (ff_cam_1A)
     {
         ff_cam_1A = false;
@@ -374,7 +375,19 @@ setInterval(() => {
     {
         freddyMove();
     }
-},  50000);
+},  3000);
+
+setInterval(() => {
+    if (freddy_door == true)
+    {
+        freddyDoorFunction();
+        return
+    }
+    else
+    {
+        return
+    }
+}, 100);
 
 //- wkurw freddiego -
 function freddyDoorFunction()
@@ -396,8 +409,8 @@ function freddyDoorFunction()
         if (ff_anger > ff_please)
         {
             jumpscare.play();
-            getEle("jumpscare").className = "jumpscare";
-            getEle("jumpscare").src = "../Assets/Bonnie/jumpscare.gif";
+            getEle("jumpscare1").className = "jumpscare";
+            //getEle("jumpscare").src = "../Assets/Freddy/jumpscare.gif";
             setTimeout(() => {
                 window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
             }, 1500);
@@ -405,8 +418,7 @@ function freddyDoorFunction()
         }
         else
         {
-            ff_cam_4B = true;
             return
         }
-    }, 50000);
+    }, 1400);
 }
