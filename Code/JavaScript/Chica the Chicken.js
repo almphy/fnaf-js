@@ -59,6 +59,15 @@ let chicaMove = () => {
             cc_cam_6 = false;
             cc_cam_7 = false;
 
+            cc_kitchen01.pause();
+            cc_kitchen01.load();
+            cc_kitchen02.pause();
+            cc_kitchen02.load();
+            cc_kitchen03.pause();
+            cc_kitchen03.load();
+            cc_kitchen04.pause();
+            cc_kitchen04.load();
+
             if (camera) {
                 getEle("map").src = "../Assets/map.png"
                 getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
@@ -107,6 +116,14 @@ let chicaMove = () => {
             console.log("------------------------------------------");
             break;
         case (2):
+            cc_kitchen01.pause();
+            cc_kitchen01.load();
+            cc_kitchen02.pause();
+            cc_kitchen02.load();
+            cc_kitchen03.pause();
+            cc_kitchen03.load();
+            cc_kitchen04.pause();
+            cc_kitchen04.load();
             cc_cam_1A = false;
             cc_cam_1B = false;
             cc_cam_4A = true;
@@ -162,6 +179,14 @@ let chicaMove = () => {
             console.log("------------------------------------------");
             break;
         case (3):
+            cc_kitchen01.pause();
+            cc_kitchen01.load();
+            cc_kitchen02.pause();
+            cc_kitchen02.load();
+            cc_kitchen03.pause();
+            cc_kitchen03.load();
+            cc_kitchen04.pause();
+            cc_kitchen04.load();
             cc_cam_1A = false;
             cc_cam_1B = false;
             cc_cam_4A = false;
@@ -291,6 +316,14 @@ let chicaMove = () => {
             console.log("------------------------------------------");
             break;
         case (5):
+            cc_kitchen01.pause();
+            cc_kitchen01.load();
+            cc_kitchen02.pause();
+            cc_kitchen02.load();
+            cc_kitchen03.pause();
+            cc_kitchen03.load();
+            cc_kitchen04.pause();
+            cc_kitchen04.load();
             cc_cam_1A = false;
             cc_cam_1B = false;
             cc_cam_4A = false;
