@@ -52,17 +52,33 @@ let camChange = (background, name) =>
     }
     else if (background == "1B")
     {
-        if (bb_cam_1B && cc_cam_1B)
+        if (bb_cam_1B && cc_cam_1B && ff_cam_1B)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-all.png')`;
+        }
+        else if (!ff_cam_1B && bb_cam_1B && cc_cam_1B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-bonnie-chica.png')`;
         }
-        else if (bb_cam_1B && !cc_cam_1B)
+        else if (!ff_cam_1B && bb_cam_1B && !cc_cam_1B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-bonnie.png')`;
         }
-        else if (!bb_cam_1B && cc_cam_1B)
+        else if (!ff_cam_1B && !bb_cam_1B && cc_cam_1B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica.png')`;
+        }
+        else if (!cc_cam_1B && bb_cam_1B && ff_cam_1B)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-bonnie-freddy.png')`;   
+        }
+        else if (!bb_cam_1B && !cc_cam_1B && ff_cam_1B)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-freddy.png')`;   
+        }
+        else if (!bb_cam_1B && cc_cam_1B && ff_cam_1B)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica-freddy.png')`;   
         }
         else
         {
@@ -115,9 +131,17 @@ let camChange = (background, name) =>
     }
     else if (background == "4A")
     {
-        if (cc_cam_4A)
+        if (!ff_cam_4A && cc_cam_4A)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica.png')`;
+        } 
+        else if (ff_cam_4A && !cc_cam_4A)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-freddy.png')`;
+        }
+        else if (ff_cam_4A && cc_cam_4A)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-both.png')`;
         } 
         else
         {
@@ -126,9 +150,13 @@ let camChange = (background, name) =>
     }
     else if (background == "4B")
     {
-        if (cc_cam_4B)
+        if (cc_cam_4B && !ff_cam_4B)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica.png')`;
+        } 
+        if (!cc_cam_4B && ff_cam_4B)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-freddy.png')`;
         } 
         else
         {
@@ -137,7 +165,15 @@ let camChange = (background, name) =>
     }
     else if (background == "7")
     {
-        if (cc_cam_7)
+        if (cc_cam_7 && ff_cam_7)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-both.png')`;
+        } 
+        else if (!cc_cam_7 && ff_cam_7)
+        {
+            getEle("cameras").style.backgroundImage = `url('../Assets/${background}-freddy.png')`;
+        } 
+        else if (cc_cam_7 && !ff_cam_7)
         {
             getEle("cameras").style.backgroundImage = `url('../Assets/${background}-chica.png')`;
         } 
