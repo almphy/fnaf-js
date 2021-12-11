@@ -6,6 +6,8 @@
 
 //- zmienne -
 let ff_aggression = 0;
+let ff_anger = 0;
+let ff_please = 0;
 
 let ff_cam_1A = true;
 let ff_cam_1B = false;
@@ -13,6 +15,8 @@ let ff_cam_4A = false;
 let ff_cam_4B = false;
 let ff_cam_6 = false;
 let ff_cam_7 = false;
+let freddy_door = false;
+let freddy_door_checker = false;
 
 let ff_move_min = Math.ceil(10000);
 let ff_move_max = Math.floor(40000);
@@ -29,6 +33,9 @@ ff_laugh03 = new Audio("../Audio/freddy03.wav");
 
 ff_lullaby = new Audio("../Audio/music box.wav");
 ff_lullaby.loop = true;
+
+ff_run = new Audio("../Audio/freddy_run.wav");
+ff_run.volume = 1;
 
 //- dupa -
 
@@ -53,8 +60,8 @@ setInterval(() => {
 
             getEle("static").className = "static";
 
-            deep_steps.volume = 1;
-            deep_steps.play();
+            ff_run.volume = 1;
+            ff_run.play();
 
             if (garble_random == 1)
             {
@@ -90,8 +97,8 @@ setInterval(() => {
             getEle("map").src = "../Assets/map.png"
             getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
 
-            deep_steps.volume = .2;
-            deep_steps.play();
+            ff_run.volume = .2;
+            ff_run.play();
         }   
     }
     else if (ff_cam_1B)
@@ -113,8 +120,8 @@ setInterval(() => {
 
             getEle("static").className = "static";
 
-            deep_steps.volume = 1;
-            deep_steps.play();
+            ff_run.volume = 1;
+            ff_run.play();
 
             if (garble_random == 1)
             {
@@ -150,8 +157,8 @@ setInterval(() => {
             getEle("map").src = "../Assets/map.png"
             getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
 
-            deep_steps.volume = .2;
-            deep_steps.play();
+            ff_run.volume = .2;
+            ff_run.play();
         }   
     }
     else if (ff_cam_7)
@@ -173,8 +180,8 @@ setInterval(() => {
 
             getEle("static").className = "static";
 
-            deep_steps.volume = 1;
-            deep_steps.play();
+            ff_run.volume = 1;
+            ff_run.play();
 
             if (garble_random == 1)
             {
@@ -210,8 +217,8 @@ setInterval(() => {
             getEle("map").src = "../Assets/map.png"
             getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
 
-            deep_steps.volume = .2;
-            deep_steps.play();
+            ff_run.volume = .2;
+            ff_run.play();
         }   
     }
     else if (ff_cam_6)
@@ -233,8 +240,8 @@ setInterval(() => {
 
             getEle("static").className = "static";
 
-            deep_steps.volume = 1;
-            deep_steps.play();
+            ff_run.volume = 1;
+            ff_run.play();
 
             if (garble_random == 1)
             {
@@ -270,8 +277,8 @@ setInterval(() => {
             getEle("map").src = "../Assets/map.png"
             getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
 
-            deep_steps.volume = .2;
-            deep_steps.play();
+            ff_run.volume = .2;
+            ff_run.play();
         }   
     }
     else if (ff_cam_4A)
@@ -293,8 +300,8 @@ setInterval(() => {
 
             getEle("static").className = "static";
 
-            deep_steps.volume = 1;
-            deep_steps.play();
+            ff_run.volume = 1;
+            ff_run.play();
 
             if (garble_random == 1)
             {
@@ -330,8 +337,8 @@ setInterval(() => {
             getEle("map").src = "../Assets/map.png"
             getEle("cameras").style.backgroundImage = "url('../Assets/6.png')";
 
-            deep_steps.volume = .2;
-            deep_steps.play();
+            ff_run.volume = .2;
+            ff_run.play();
         }   
     }
     else if (ff_cam_4B)
@@ -339,9 +346,50 @@ setInterval(() => {
         ff_cam_1A = false;
         ff_cam_1B = false;
         ff_cam_4A = false;
-        ff_cam_4B = true;
+        ff_cam_4B = false;
         ff_cam_6 = false;
         ff_cam_7 = false;
+
+        freddyDoorFunction();
+    }
+    else
+    {
+
     }
 
 }, 50000);
+
+//- wkurw freddiego -
+function freddyDoorFunction()
+{
+    deep_steps.volume = 1;
+    deep_steps.play();
+
+    if (!right_door)
+    {
+        ff_anger += .5;
+    }
+    else
+    {
+        ff_please += .1;
+    }
+
+    setTimeout(() => {
+
+        if (ff_anger > ff_please)
+        {
+            jumpscare.play();
+            getEle("jumpscare").className = "jumpscare";
+            getEle("jumpscare").src = "../Assets/Bonnie/jumpscare.gif";
+            setTimeout(() => {
+                window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
+            }, 1500);
+            return
+        }
+        else
+        {
+            ff_cam_4B = true;
+            return
+        }
+    }, 1000);
+}
