@@ -111,9 +111,6 @@ let chicaMove = () => {
                 deep_steps.play();
             }
 
-            console.log(`cam 1b ${cc_cam_1B}`);
-
-            console.log("------------------------------------------");
             break;
         case (2):
             cc_kitchen01.pause();
@@ -173,10 +170,6 @@ let chicaMove = () => {
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
-
-            console.log(`cam 4a ${cc_cam_4A}`);
-
-            console.log("------------------------------------------");
             break;
         case (3):
             cc_kitchen01.pause();
@@ -236,10 +229,6 @@ let chicaMove = () => {
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
-
-            console.log(`cam 4b ${cc_cam_4B}`);
-
-            console.log("------------------------------------------");
             break;
         case (4):
             cc_cam_1A = false;
@@ -310,10 +299,6 @@ let chicaMove = () => {
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
-
-            console.log(`cam 6 ${cc_cam_6}`);
-
-            console.log("------------------------------------------");
             break;
         case (5):
             cc_kitchen01.pause();
@@ -373,10 +358,6 @@ let chicaMove = () => {
                 deep_steps.volume = .2;
                 deep_steps.play();
             }
-
-            console.log(`cam 7 ${cc_cam_7}`);
-
-            console.log("------------------------------------------");
             break;
 
     }
@@ -412,11 +393,9 @@ function chicaDoorFunction() {
         else {
             cc_anger += 2;
         }
-        console.log(`anger: ${cc_anger}`);
     }
     else {
         cc_please += 1.25;
-        console.log(`please: ${cc_please}`);
     }
 
     setTimeout(() => {

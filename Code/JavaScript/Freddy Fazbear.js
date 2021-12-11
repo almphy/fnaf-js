@@ -9,6 +9,7 @@ let ff_aggression = 0;
 let ff_anger = 0;
 let ff_please = 0;
 
+let bruh
 let ff_cam_1A = true;
 let ff_cam_1B = false;
 let ff_cam_4A = false;
@@ -39,8 +40,8 @@ ff_run.volume = 1;
 
 //- dupa -
 
-setInterval(() => {
-    
+function freddyMove()
+{
     if (ff_cam_1A)
     {
         ff_cam_1A = false;
@@ -350,28 +351,44 @@ setInterval(() => {
         ff_cam_6 = false;
         ff_cam_7 = false;
 
-        freddyDoorFunction();
+        bruh = setInterval(() => {
+            freddyDoorFunction();
+        }, 100);
     }
     else
     {
 
     }
 
-}, 50000);
+}
+
+setInterval(() => {
+    if (ff_cam_4B == true)
+    {
+        if (!freddy_door_checker)
+        {
+            freddy_door = true;
+        }
+    }
+    else
+    {
+        freddyMove();
+    }
+},  50000);
 
 //- wkurw freddiego -
 function freddyDoorFunction()
 {
-    deep_steps.volume = 1;
-    deep_steps.play();
-
+    freddy_door_checker = true;
     if (!right_door)
     {
         ff_anger += .5;
+        console.log(`freddy please: ${ff_anger}`);
     }
     else
     {
         ff_please += .1;
+        console.log(`freddy please: ${ff_please}`);
     }
 
     setTimeout(() => {
@@ -391,5 +408,5 @@ function freddyDoorFunction()
             ff_cam_4B = true;
             return
         }
-    }, 1000);
+    }, 50000);
 }
