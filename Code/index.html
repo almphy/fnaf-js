@@ -10,6 +10,7 @@
     @import url("CSS/cams.css");
     @import url("CSS/info.css");
     @import url("CSS/jumpscares.css");
+    @import url("CSS/menu.css");
     </style>
 </head>
 <body background="../Assets/background.png">
@@ -90,16 +91,44 @@
 
     <img src="../Assets/vader.png" class="freddyNose" onclick="freddyNoseSound();">
 
+    <div id="Menu" class="Menu">
+
+        <img id="logoMenu" class="logoMenu" src="../Assets/logo.png">
+
+        <input id="load" class="start" type="button" value="- Night 1" onclick="if (!amongus) loadJS(); else console.log('hello');">
+        
+        <img id="static3" class="static3" src="../Assets/static.gif">
+
+        <img id="bakgroundMenu" class="bakgroundMenu" src="../Assets/menu/background.png">
+    
+    </div>
+
     <img id="jumpscare1" class="hidden" src="../Assets/Freddy/f_jumpscarew.png">
     <img id="jumpscare2" class="hidden" src="../Assets/Chica/jumpscare.png">
     <img id="jumpscare3" class="hidden" src="../Assets/Bonnie/jumpscare.gif">
     <img id="jumpscare4" class="hidden" src="../Assets/Foxy/jumpscare.png">
-
-    <input id="load" style="position: absolute; width: 150px; height: 70px;" type="button" value="AMONG US BUTTON" onclick="if (!amongus) loadJS(); else console.log('hello');">
+    <img id="jumpscare5" class="hidden" src="../Assets/Freddy/jumpscare.png">
+    <img id="win" class="hidden" src="../Assets/win.gif">
 
     <script>
 
-        var amongus = false;
+    phone_call = new Audio("../Audio/voiceover1c.wav");
+    buzzing = new Audio("../Audio/buzzing.wav");
+    win = new Audio("../Audio/win.mp3");
+
+    var amongus = false;
+
+    var script_names_night1 =
+    [
+        "JavaScript/main.js","JavaScript/animatronics.js","JavaScript/variables.js",
+        "JavaScript/cameras_night1.js","JavaScript/tablet.js","JavaScript/toggles.js",
+        "JavaScript/Bonnie the Bunny.js","JavaScript/Golden Freddy.js","JavaScript/Chica the Chicken.js",
+    ];
+
+    var id_names_menu =
+    [
+        "Menu","logoMenu","load","static3","bakgroundMenu"
+    ];
 
     var script_names =
     [
@@ -120,13 +149,20 @@
 
     function loadJS()
     {
-        for (var i = 0; i < 11; i++)
+        for (var i = 0; i < 9; i++)
         {
             variable_names[i] = document.createElement("script");
-            variable_names[i].setAttribute("src", script_names[i]);
+            variable_names[i].setAttribute("src", script_names_night1[i]);
             document.body.appendChild(variable_names[i]);
         }
         amongus = true;
+        phone_call.play();
+        buzzing.play();
+
+        for (var i = 0; i < 5; i++)
+        {
+            document.getElementById(id_names_menu[i]).className = "hidden";
+        }
     }
 
     </script>

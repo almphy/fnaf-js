@@ -6,16 +6,6 @@
 
 //- zmienne -
 
-cc_kitchen01 = new Audio("../Audio/pots01.wav");
-cc_kitchen02 = new Audio("../Audio/pots02.wav");
-cc_kitchen03 = new Audio("../Audio/pots03.wav");
-cc_kitchen04 = new Audio("../Audio/pots04.wav");
-
-cc_kitchen03.loop = true;
-cc_kitchen01.loop = true;
-cc_kitchen04.loop = true;
-cc_kitchen02.loop = true;
-
 let cc_aggression = 0;
 let cc_anger = 0;
 let cc_please = 0;
@@ -24,14 +14,14 @@ let cc_random = 0;
 let cc_time = 1;
 let cc_half = 1;
 
-let cc_move_min = Math.ceil(10000);
-let cc_move_max = Math.floor(40000);
+let cc_move_min = Math.ceil(25000);
+let cc_move_max = Math.floor(67000);
 
 let cc_camera_min = Math.ceil(1);
 let cc_camera_max = Math.floor(6);
 
 let pots_min = Math.ceil(1);
-let pots_max = Math.floor(5);
+let pots_max = Math.floor(4);
 
 let chica_cams =
 [
@@ -97,7 +87,7 @@ let chicaMove = () => {
                 }
             }
 
-            for (var i = 0; i < 4; i++)
+            for (var i = 0; i < 3; i++)
             {
                 kitchen_sounds[i].pause();
                 kitchen_sounds[i].load();
@@ -116,7 +106,7 @@ let chicaMove = () => {
             camChange(current_camera[1], current_camera[0]);
             break;
         case (2):
-            for (var i = 0; i < 4; i++)
+            for (var i = 0; i < 3; i++)
             {
                 kitchen_sounds[i].pause();
                 kitchen_sounds[i].load();
@@ -145,7 +135,7 @@ let chicaMove = () => {
             camChange(current_camera[1], current_camera[0]);
             break;
         case (3):
-            for (var i = 0; i < 4; i++)
+            for (var i = 0; i < 3; i++)
             {
                 kitchen_sounds[i].pause();
                 kitchen_sounds[i].load();
@@ -184,6 +174,8 @@ let chicaMove = () => {
                 }
             }
 
+            console.log("kuchnia")
+
             pots_random = Math.floor(Math.random() * (sound_max - sound_min)) + sound_min;
 
             if (pots_random == 1)
@@ -220,7 +212,7 @@ let chicaMove = () => {
             camChange(current_camera[1], current_camera[0]);
             break;
         case (5):
-            for (var i = 0; i < 4; i++)
+            for (var i = 0; i < 3; i++)
             {
                 kitchen_sounds[i].pause();
                 kitchen_sounds[i].load();
@@ -266,9 +258,13 @@ setInterval(() => {
 
 //- wkurw bonniego -
 function chicaDoorFunction() {
-    deep_steps.volume = 1;
-    deep_steps.load();
-    deep_steps.play();
+    cc_deep_steps = new Audio("../Audio/deep_steps.wav");
+    cc_deep_steps.volume = 1;
+    cc_deep_steps.load();
+    cc_deep_steps.play();
+    setTimeout(() => {
+        cc_deep_steps.pause();   
+    }, 1000);
     chica_door_checker = true;
     min = Math.ceil(10000);
     max = Math.floor(30000);

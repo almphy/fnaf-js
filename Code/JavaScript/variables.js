@@ -29,7 +29,6 @@ let cam_6 = false;
 audio = new Audio("../Audio/boop.wav");
 turn_on = new Audio("../Audio/turn_on.wav");
 turn_off = new Audio("../Audio/turn_off.wav");
-buzzing = new Audio("../Audio/buzzing.wav");
 door_light = new Audio("../Audio/light_hum.wav");
 door_light2 = new Audio("../Audio/light_hum.wav");
 night_1_call = new Audio("../Audio/voiceover1c.wav");
@@ -65,11 +64,18 @@ ff_laugh01 = new Audio("../Audio/freddy01.wav");
 ff_laugh02 = new Audio("../Audio/freddy02.wav");
 ff_laugh03 = new Audio("../Audio/freddy03.wav");
 ff_lullaby = new Audio("../Audio/music box.wav");
-
+cc_kitchen01 = new Audio("../Audio/pots01.wav");
+cc_kitchen02 = new Audio("../Audio/pots02.wav");
+cc_kitchen03 = new Audio("../Audio/pots03.wav");
+cc_kitchen04 = new Audio("../Audio/pots04.wav");
 ff_run = new Audio("../Audio/freddy_run.wav");
 
 //- definitions -
 
+cc_kitchen03.loop = true;
+cc_kitchen01.loop = true;
+cc_kitchen04.loop = true;
+cc_kitchen02.loop = true;
 buzzing.loop = true;
 deep_steps.volume = .2;
 door_light.loop = true;

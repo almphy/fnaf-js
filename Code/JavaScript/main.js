@@ -1,10 +1,31 @@
 //---- Main ----
 
-let night = 1;
+setInterval(() => {
+    
+    if (power <= 0)
+    {
+        jumpscare.play();
+        getEle("jumpscare5").className = "jumpscare";
+        setTimeout(() => {
+            window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
+        }, 850);
+    }
+
+}, 1000);
 
 setInterval(() => {
     
-}, 100);
+    if (hour == 6)
+    {
+        win.play();
+
+        getEle("win").className = "jumpscare";
+        setTimeout(() => {
+            document.location.reload(true)
+        }, 14000);
+    }
+
+}, 1000);
 
 document.body.onkeyup = function(event)
 {
@@ -34,17 +55,6 @@ document.body.onkeyup = function(event)
     }
 }
 
-
-//- 0% mocy moment -
-if (power == 0)
-{
-    getEle("power").className = "hidden";
-    getEle("usage").className = "hidden";
-    getEle("doorButtonL").className = "hidden";
-    getEle("doorButtonR").className = "hidden";
-    getEle("doorR").className = "hidden";
-    getEle("doorL").className = "hidden";
-}
 
 //- telefon -
 let phoneCall = () =>

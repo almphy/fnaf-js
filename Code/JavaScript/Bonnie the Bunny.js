@@ -24,8 +24,8 @@ var bonnie_cams =
     ["5", false],
 ];
 
-let bb_move_min = Math.ceil(10000);
-let bb_move_max = Math.floor(40000);
+let bb_move_min = Math.ceil(18000);
+let bb_move_max = Math.floor(60000);
 
 let bb_camera_min = Math.ceil(1);
 let bb_camera_max = Math.floor(6);
@@ -176,9 +176,12 @@ setInterval(() => {
 //- wkurw bonniego -
 function bonnieDoorFunction()
 {
-    deep_steps.volume = 1;
-    deep_steps.load();
-    deep_steps.play();
+    bb_deep_steps = new Audio("../Audio/deep_steps.wav");
+    bb_deep_steps.volume = 1;
+    bb_deep_steps.play();
+    setTimeout(() => {
+        bb_deep_steps.pause();   
+    }, 100);
     bonnie_door_checker = true;
     min = Math.ceil(10000);
     max = Math.floor(30000);

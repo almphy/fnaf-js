@@ -12,7 +12,6 @@ setInterval(() => {
     else if (hour == 6)
     {
         hour = 12;
-        night++;
         document.getElementById("hour").innerHTML = `${hour} AM`;
         document.getElementById("hour").style.marginLeft = "1px";
     }
@@ -22,32 +21,8 @@ setInterval(() => {
         document.getElementById("hour").innerHTML = `${hour} AM`;
         document.getElementById("hour").style.marginLeft = "54px";
     }
-}, 1000);
+}, 90000);
 
-//- godzina -
-setInterval(() => {
-    
-    if (night == 1)
-    {
-        getEle("night").innerHTML = "NIGHT </br> ONE";
-    }
-    else if (night == 2)
-    {
-        getEle("night").innerHTML = "NIGHT </br> TWO";
-    }
-    else if (night == 3)
-    {
-        getEle("night").innerHTML = "NIGHT </br> THREE";
-    }
-    else if (night == 4)
-    {
-        getEle("night").innerHTML = "NIGHT </br> FOUR";
-    }
-    else if (night == 5)
-    {
-        getEle("night").innerHTML = "NIGHT </br> FIVE";
-    }
-}, 100);
 
 //- zużywanie energi -
 setInterval(
