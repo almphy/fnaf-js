@@ -87,7 +87,7 @@ let getEle = (id) =>
     return(document.getElementById(id));
 };
 
-//- twierdzenie streetz'a -
+//- twierdzenie streetz'a (streetz's theorem) -
 function emptyFunction()
 {
 

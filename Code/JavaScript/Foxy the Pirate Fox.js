@@ -6,6 +6,13 @@
 
 //- zmienne -
 
+let foxy_songs =
+[
+    ["song 1", false],
+    ["song 2", false],
+    ["song 3", false],
+];
+
 fp_song_1 = false;
 fp_song_2 = false;
 fp_song_3 = false;
@@ -62,9 +69,10 @@ function foxyLullaby(az)
 {
     if (az === "one")
     {
-        fp_song_1 = true;
-        fp_song_2 = false;
-        fp_song_3 = false;
+        foxy_songs[0][1] = true;
+        foxy_songs[1][1] = false;
+        foxy_songs[2][1] = false;
+
         music_box_01.load();
         music_box_01.play();
         music_box_02.pause();
@@ -72,9 +80,10 @@ function foxyLullaby(az)
     }
     else if (az === "two")
     {
-        fp_song_1 = false;
-        fp_song_2 = true;
-        fp_song_3 = false;
+        foxy_songs[0][1] = false;
+        foxy_songs[1][1] = true;
+        foxy_songs[2][1] = false;
+
         music_box_02.load();
         music_box_02.play();
         music_box_01.pause();
@@ -82,9 +91,10 @@ function foxyLullaby(az)
     }
     else if (az === "three")
     {
-        fp_song_1 = false;
-        fp_song_2 = false;
-        fp_song_3 = true;
+        foxy_songs[0][1] = false;
+        foxy_songs[1][1] = false;
+        foxy_songs[2][1] = true;
+
         music_box_03.load();
         music_box_03.play();
         music_box_02.pause();
@@ -106,12 +116,12 @@ setInterval(() => {
 
     if (fp_irritation == 1)
     {
-        if (!fp_song_1)
+        if (!foxy_songs[0][1])
         {
             fp_pirate_song.play();
             setTimeout(() => {
                 
-                if (!fp_song_1)
+                if (!foxy_songs[0][1])
                 {
                     jumpscare.play();
                     getEle("jumpscare4").className = "jumpscare";
@@ -141,12 +151,12 @@ setInterval(() => {
     }
     else if (fp_irritation == 2)
     {
-        if (!fp_song_2)
+        if (!foxy_songs[1][1])
         {
             fp_pirate_song.play();
             setTimeout(() => {
                 
-                if (!fp_song_2)
+                if (!foxy_songs[1][1])
                 {
                     jumpscare.play();
                     getEle("jumpscare4").className = "jumpscare";
@@ -176,12 +186,12 @@ setInterval(() => {
     }
     else if (fp_irritation == 3)
     {
-        if (!fp_song_3)
+        if (!foxy_songs[2][1])
         {
             fp_pirate_song.play();
             setTimeout(() => {
                 
-                if (!fp_song_3)
+                if (!foxy_songs[2][1])
                 {
                     jumpscare.play();
                     getEle("jumpscare4").className = "jumpscare";

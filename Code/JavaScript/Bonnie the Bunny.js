@@ -13,18 +13,23 @@ let bb_random = 0;
 let bb_time = 1;
 let bb_half = 1;
 
+// zrobiłem to:
+var bonnie_cams =
+[
+    ["1A", true],
+    ["1B", false],
+    ["2A", false],
+    ["2B", false],
+    ["3", false],
+    ["5", false],
+];
+
 let bb_move_min = Math.ceil(10000);
 let bb_move_max = Math.floor(40000);
 
 let bb_camera_min = Math.ceil(1);
 let bb_camera_max = Math.floor(6);
 
-let bb_cam_1A = true;
-let bb_cam_1B = false;
-let bb_cam_2A = false;
-let bb_cam_2B = false;
-let bb_cam_3 = false;
-let bb_cam_5 = false;
 let bonnie_door = false;
 let bonnie_door_checker = false;
 
@@ -37,12 +42,15 @@ let bonnieMove = () =>
     switch (bb_camera)
     {
         case (1):
-            bb_cam_1B = true;
-            bb_cam_1A = false;
-            bb_cam_2A = false;
-            bb_cam_2B = false;
-            bb_cam_3 = false;
-            bb_cam_5 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                bonnie_cams[i][1] = false;
+
+                if (i == 1)
+                {
+                    bonnie_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -57,12 +65,15 @@ let bonnieMove = () =>
             camChange(current_camera[1], current_camera[0]);
             break;
         case (2):
-            bb_cam_2A = true;
-            bb_cam_1B = false;
-            bb_cam_1A = false;
-            bb_cam_2B = false;
-            bb_cam_3 = false;
-            bb_cam_5 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                bonnie_cams[i][1] = false;
+
+                if (i == 2)
+                {
+                    bonnie_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -77,12 +88,15 @@ let bonnieMove = () =>
             camChange(current_camera[1], current_camera[0]);
             break;
         case (3):
-            bb_cam_2B = true;
-            bb_cam_1B = false;
-            bb_cam_1A = false;
-            bb_cam_2A = false;
-            bb_cam_3 = false;
-            bb_cam_5 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                bonnie_cams[i][1] = false;
+
+                if (i == 3)
+                {
+                    bonnie_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -97,12 +111,15 @@ let bonnieMove = () =>
             camChange(current_camera[1], current_camera[0]);
             break;
         case (4):
-            bb_cam_3 = true;
-            bb_cam_1B = false;
-            bb_cam_1A = false;
-            bb_cam_2A = false;
-            bb_cam_2B = false;
-            bb_cam_5 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                bonnie_cams[i][1] = false;
+
+                if (i == 4)
+                {
+                    bonnie_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -117,12 +134,15 @@ let bonnieMove = () =>
             camChange(current_camera[1], current_camera[0]);
             break;
         case (5):
-            bb_cam_5 = true;
-            bb_cam_1B = false;
-            bb_cam_1A = false;
-            bb_cam_2A = false;
-            bb_cam_2B = false;
-            bb_cam_3 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                bonnie_cams[i][1] = false;
+
+                if (i == 5)
+                {
+                    bonnie_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -140,7 +160,7 @@ let bonnieMove = () =>
 };
 //- sprawdzanie chodzenia bonniego -
 setInterval(() => {
-    if (bb_cam_2B == true)
+    if (bonnie_cams[3][1] == true)
     {
         if (!bonnie_door_checker)
         {
@@ -156,9 +176,9 @@ setInterval(() => {
 //- wkurw bonniego -
 function bonnieDoorFunction()
 {
-            deep_steps.volume = 1;
-            deep_steps.load();
-        deep_steps.play();
+    deep_steps.volume = 1;
+    deep_steps.load();
+    deep_steps.play();
     bonnie_door_checker = true;
     min = Math.ceil(10000);
     max = Math.floor(30000);

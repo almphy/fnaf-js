@@ -9,12 +9,17 @@ let ff_anger = 0;
 let ff_please = 0;
 
 let bruh
-let ff_cam_1A = true;
-let ff_cam_1B = false;
-let ff_cam_4A = false;
-let ff_cam_4B = false;
-let ff_cam_6 = false;
-let ff_cam_7 = false;
+
+let freddy_cams =
+[
+    ["1A", true],
+    ["1B", false],
+    ["4A", false],
+    ["4B", false],
+    ["6", false],
+    ["7", false],
+];
+
 let freddy_door = false;
 let freddy_door_checker = false;
 
@@ -49,14 +54,17 @@ setInterval(() => {
 function freddyMove()
 {
     garble_random = Math.floor(Math.random() * (sound_max - sound_min)) + sound_min;
-    if (ff_cam_1A)
+    if (freddy_cams[0][1])
     {
-        ff_cam_1A = false;
-        ff_cam_1B = true;
-        ff_cam_4A = false;
-        ff_cam_4B = false;
-        ff_cam_6 = false;
-        ff_cam_7 = false;
+        for (var i = 0; i < 5; i++)
+        {
+            freddy_cams[i][1] = false;
+
+            if (i == 1)
+            {
+                freddy_cams[i][1] = true;    
+            }
+        }
 
         ff_lullaby.pause();
         ff_laugh01.play();
@@ -71,14 +79,17 @@ function freddyMove()
 
         camChange(current_camera[1], current_camera[0]);
     }
-    else if (ff_cam_1B)
+    else if (freddy_cams[1][1])
     {
-        ff_cam_1A = false;
-        ff_cam_1B = false;
-        ff_cam_4A = false;
-        ff_cam_4B = false;
-        ff_cam_6 = false;
-        ff_cam_7 = true;
+        for (var i = 0; i < 5; i++)
+        {
+            freddy_cams[i][1] = false;
+
+            if (i == 5)
+            {
+                freddy_cams[i][1] = true;    
+            }
+        }
 
         ff_lullaby.pause();
         ff_laugh02.play();
@@ -92,14 +103,17 @@ function freddyMove()
         }   
         camChange(current_camera[1], current_camera[0]);
     }
-    else if (ff_cam_7)
+    else if (freddy_cams[5][1])
     {
-        ff_cam_1A = false;
-        ff_cam_1B = false;
-        ff_cam_4A = false;
-        ff_cam_4B = false;
-        ff_cam_6 = true;
-        ff_cam_7 = false;
+        for (var i = 0; i < 5; i++)
+        {
+            freddy_cams[i][1] = false;
+
+            if (i == 4)
+            {
+                freddy_cams[i][1] = true;    
+            }
+        }
 
         ff_lullaby.play();
         ff_laugh03.play();
@@ -113,14 +127,17 @@ function freddyMove()
         }  
         camChange(current_camera[1], current_camera[0]);
     }
-    else if (ff_cam_6)
+    else if (freddy_cams[4][1])
     {
-        ff_cam_1A = false;
-        ff_cam_1B = false;
-        ff_cam_4A = true;
-        ff_cam_4B = false;
-        ff_cam_6 = false;
-        ff_cam_7 = false;
+        for (var i = 0; i < 5; i++)
+        {
+            freddy_cams[i][1] = false;
+
+            if (i == 2)
+            {
+                freddy_cams[i][1] = true;    
+            }
+        }
 
         ff_lullaby.pause();
         ff_laugh01.play();
@@ -134,14 +151,17 @@ function freddyMove()
         }  
         camChange(current_camera[1], current_camera[0]);
     }
-    else if (ff_cam_4A)
+    else if (freddy_cams[2][1])
     {
-        ff_cam_1A = false;
-        ff_cam_1B = false;
-        ff_cam_4A = false;
-        ff_cam_4B = true;
-        ff_cam_6 = false;
-        ff_cam_7 = false;
+        for (var i = 0; i < 5; i++)
+        {
+            freddy_cams[i][1] = false;
+
+            if (i == 3)
+            {
+                freddy_cams[i][1] = true;    
+            }
+        }
 
         ff_lullaby.pause();
         ff_laugh02.play();
@@ -155,14 +175,12 @@ function freddyMove()
         }  
         camChange(current_camera[1], current_camera[0]);
     }
-    else if (ff_cam_4B)
+    else if (freddy_cams[3][1])
     {
-        ff_cam_1A = false;
-        ff_cam_1B = false;
-        ff_cam_4A = false;
-        ff_cam_4B = false;
-        ff_cam_6 = false;
-        ff_cam_7 = false;
+        for (var i = 0; i < 5; i++)
+        {
+            freddy_cams[i][1] = false;
+        }
 
         camChange(current_camera[1], current_camera[0]);
         bruh = setInterval(() => {
@@ -177,7 +195,7 @@ function freddyMove()
 }
 
 setInterval(() => {
-    if (ff_cam_4B == true)
+    if (freddy_cams[3][1] == true)
     {
         if (!freddy_door_checker)
         {

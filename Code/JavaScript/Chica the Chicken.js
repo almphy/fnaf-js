@@ -5,6 +5,17 @@
 //----------------------------------------------------------------------------------------------------------------------------
 
 //- zmienne -
+
+cc_kitchen01 = new Audio("../Audio/pots01.wav");
+cc_kitchen02 = new Audio("../Audio/pots02.wav");
+cc_kitchen03 = new Audio("../Audio/pots03.wav");
+cc_kitchen04 = new Audio("../Audio/pots04.wav");
+
+cc_kitchen03.loop = true;
+cc_kitchen01.loop = true;
+cc_kitchen04.loop = true;
+cc_kitchen02.loop = true;
+
 let cc_aggression = 0;
 let cc_anger = 0;
 let cc_please = 0;
@@ -22,12 +33,22 @@ let cc_camera_max = Math.floor(6);
 let pots_min = Math.ceil(1);
 let pots_max = Math.floor(5);
 
-let cc_cam_1A = true;
-let cc_cam_1B = false;
-let cc_cam_4A = false;
-let cc_cam_4B = false;
-let cc_cam_6 = false;
-let cc_cam_7 = false;
+let chica_cams =
+[
+    ["1A", true],
+    ["1B", false],
+    ["4A", false],
+    ["4B", false],
+    ["6", false],
+    ["7", false],
+];
+
+let kitchen_sounds =
+[
+    "cc_kitchen01","cc_kitchen02","cc_kitchen03",
+    "cc_kitchen04"
+];
+
 let chica_door = false;
 let chica_door_checker = false;
 
@@ -66,21 +87,21 @@ let chicaMove = () => {
 
     switch (cc_camera) {
         case (1):
-            cc_cam_1A = false;
-            cc_cam_1B = true;
-            cc_cam_4A = false;
-            cc_cam_4B = false;
-            cc_cam_6 = false;
-            cc_cam_7 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                chica_cams[i][1] = false;
 
-            cc_kitchen01.pause();
-            cc_kitchen01.load();
-            cc_kitchen02.pause();
-            cc_kitchen02.load();
-            cc_kitchen03.pause();
-            cc_kitchen03.load();
-            cc_kitchen04.pause();
-            cc_kitchen04.load();
+                if (i == 1)
+                {
+                    chica_cams[i][1] = true;    
+                }
+            }
+
+            for (var i = 0; i < 4; i++)
+            {
+                kitchen_sounds[i].pause();
+                kitchen_sounds[i].load();
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -95,21 +116,21 @@ let chicaMove = () => {
             camChange(current_camera[1], current_camera[0]);
             break;
         case (2):
-            cc_kitchen01.pause();
-            cc_kitchen01.load();
-            cc_kitchen02.pause();
-            cc_kitchen02.load();
-            cc_kitchen03.pause();
-            cc_kitchen03.load();
-            cc_kitchen04.pause();
-            cc_kitchen04.load();
+            for (var i = 0; i < 4; i++)
+            {
+                kitchen_sounds[i].pause();
+                kitchen_sounds[i].load();
+            }
 
-            cc_cam_1A = false;
-            cc_cam_1B = false;
-            cc_cam_4A = true;
-            cc_cam_4B = false;
-            cc_cam_6 = false;
-            cc_cam_7 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                chica_cams[i][1] = false;
+
+                if (i == 2)
+                {
+                    chica_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -124,20 +145,21 @@ let chicaMove = () => {
             camChange(current_camera[1], current_camera[0]);
             break;
         case (3):
-            cc_kitchen01.pause();
-            cc_kitchen01.load();
-            cc_kitchen02.pause();
-            cc_kitchen02.load();
-            cc_kitchen03.pause();
-            cc_kitchen03.load();
-            cc_kitchen04.pause();
-            cc_kitchen04.load();
-            cc_cam_1A = false;
-            cc_cam_1B = false;
-            cc_cam_4A = false;
-            cc_cam_4B = true;
-            cc_cam_6 = false;
-            cc_cam_7 = false;
+            for (var i = 0; i < 4; i++)
+            {
+                kitchen_sounds[i].pause();
+                kitchen_sounds[i].load();
+            }
+
+            for (var i = 0; i < 5; i++)
+            {
+                chica_cams[i][1] = false;
+
+                if (i == 3)
+                {
+                    chica_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
@@ -152,12 +174,15 @@ let chicaMove = () => {
             camChange(current_camera[1], current_camera[0]);
             break;
         case (4):
-            cc_cam_1A = false;
-            cc_cam_1B = false;
-            cc_cam_4A = false;
-            cc_cam_4B = false;
-            cc_cam_6 = true;
-            cc_cam_7 = false;
+            for (var i = 0; i < 5; i++)
+            {
+                chica_cams[i][1] = false;
+
+                if (i == 4)
+                {
+                    chica_cams[i][1] = true;    
+                }
+            }
 
             pots_random = Math.floor(Math.random() * (sound_max - sound_min)) + sound_min;
 
@@ -195,27 +220,29 @@ let chicaMove = () => {
             camChange(current_camera[1], current_camera[0]);
             break;
         case (5):
-            cc_kitchen01.pause();
-            cc_kitchen01.load();
-            cc_kitchen02.pause();
-            cc_kitchen02.load();
-            cc_kitchen03.pause();
-            cc_kitchen03.load();
-            cc_kitchen04.pause();
-            cc_kitchen04.load();
-            cc_cam_1A = false;
-            cc_cam_1B = false;
-            cc_cam_4A = false;
-            cc_cam_4B = false;
-            cc_cam_6 = false;
-            cc_cam_7 = true;
+            for (var i = 0; i < 4; i++)
+            {
+                kitchen_sounds[i].pause();
+                kitchen_sounds[i].load();
+            }
+
+            for (var i = 0; i < 5; i++)
+            {
+                chica_cams[i][1] = false;
+
+                if (i == 5)
+                {
+                    chica_cams[i][1] = true;    
+                }
+            }
 
             if (camera) {
                 deep_steps.volume = 1;
                 deep_steps.load();
                 deep_steps.play();
             }
-            else {
+            else
+            {
                 deep_steps.volume = .2;
                 deep_steps.load();
                 deep_steps.play();
@@ -227,7 +254,7 @@ let chicaMove = () => {
 }
 //- sprawdzanie chodzenia bonniego -
 setInterval(() => {
-    if (cc_cam_4B == true) {
+    if (chica_cams[3][1] == true) {
         if (!chica_door_checker) {
             chica_door = true;
         }

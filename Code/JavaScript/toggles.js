@@ -1,8 +1,29 @@
 //---- Toggles ----
 
+let id_names =
+[
+    "line","cameras","map","camName","cam1A","cam1B",
+    "cam1C","cam2A","cam2B","cam3","cam4A","cam4B","cam5",
+    "cam6","cam7","static","music","foxyAnger","musicButton1",
+    "musicButton2","musicButton3"
+];
+
+let office_id_names =
+[
+    "officeRight","officeLeft","doorButtonL","lightButtonL",
+    "doorButtonR","lightButtonR","doorL","doorR","fan",
+];
+
+let id_names_2 =
+[
+    "tablet","power","usage","heat","hour",
+    "night","muteCall"
+];
+
 //- kamera -
-let cameraToggle = () =>
+function cameraToggle()
 {
+
     if (tablet)
     {
         tabletToggle();
@@ -15,29 +36,14 @@ let cameraToggle = () =>
 
         let static = 100;
         camera_move.play();
-        getEle("line").className = "line";
-        getEle("usage").innerHTML = `Power usage: x${power_usage + 1}`;
-        getEle("cameras").className = "cameras";
-        getEle("map").className = "map";
-        getEle("camName").className = "camName";
-        getEle("cam1A").className = "cam1A";
-        getEle("cam1B").className = "cam1B";
-        getEle("cam1C").className = "cam1C";
-        getEle("cam2A").className = "cam2A";
-        getEle("cam2B").className = "cam2B";
-        getEle("cam3").className = "cam3";
-        getEle("cam4A").className = "cam4A";
-        getEle("cam4B").className = "cam4B";
-        getEle("cam5").className = "cam5";
-        getEle("cam6").className = "cam6";
-        getEle("cam7").className = "cam7";
-        getEle("static").className = "static";
 
-        getEle("music").className = "music";
-        getEle("foxyAnger").className = "foxyAnger";
-        getEle("musicButton1").className = "musicButton1";
-        getEle("musicButton2").className = "musicButton2";
-        getEle("musicButton3").className = "musicButton3";
+        for (var i = 0; i < 21; i++)
+        {
+            getEle(id_names[i]).className = id_names[i];
+        }
+
+        getEle("usage").innerHTML = `Power usage: x${power_usage + 1}`;
+
         camera_open.play();
         camera = true;
         let inter = setInterval(
@@ -57,29 +63,12 @@ let cameraToggle = () =>
         getEle("cameraToggle").src = "../Assets/button.png";
 
         camera_move.pause();
-        getEle("line").className = "hidden";
-        getEle("usage").innerHTML = `Power usage: x${power_usage - 1 + 1}`;
-        getEle("cameras").className = "hidden";
-        getEle("static").className = "hidden";
-        getEle("map").className = "hidden";
-        getEle("camName").className = "hidden";
-        getEle("cam1A").className = "hidden";
-        getEle("cam1B").className = "hidden";
-        getEle("cam1C").className = "hidden";
-        getEle("cam2A").className = "hidden";
-        getEle("cam2B").className = "hidden";
-        getEle("cam3").className = "hidden";
-        getEle("cam4A").className = "hidden";
-        getEle("cam4B").className = "hidden";
-        getEle("cam5").className = "hidden";
-        getEle("cam6").className = "hidden";
-        getEle("cam7").className = "hidden";
+        for (var i = 0; i < 21; i++)
+        {
+            getEle(id_names[i]).className = "hidden";
+        }
+        getEle("usage").innerHTML = `Power usage: x${power_usage - 1}`;
 
-        getEle("music").className = "hidden";
-        getEle("foxyAnger").className = "hidden";
-        getEle("musicButton1").className = "hidden";
-        getEle("musicButton2").className = "hidden";
-        getEle("musicButton3").className = "hidden";
         camera_close.play();
         camera_open.pause();
         camera_open.load();
@@ -88,7 +77,7 @@ let cameraToggle = () =>
 };
 
 //- drzwi -
-let doorFunction = (side) =>
+function doorFunction(side)
 {
     door_sound = new Audio("../Audio/door_close.wav");
     error_aud = new Audio("../Audio/error.wav");
@@ -204,7 +193,7 @@ let doorFunction = (side) =>
 };
 
 //- światło -
-let lightFunction = (side) =>
+function lightFunction(side)
 {
     if (side == "Left")
     {
@@ -308,7 +297,8 @@ function fanToggle() {
         getEle("fan").src = "../Assets/fan_spin.gif";
         turn_on.play();
         buzzing.play(); 
-    } else {
+    } else
+    {
 
         clearInterval(aDown);
         aUp = setInterval(function() {
@@ -338,35 +328,29 @@ function fanToggle() {
 //- tablet -
 let tabletToggle = () =>
 {
+    camera_open_tablet = new Audio("../Audio/tablet_close.wav");
+tablet_on = new Audio("../Audio/tablet_on.wav");
     if (camera)
     {
         cameraToggle();
     }
     if (!tablet)
     {
-        getEle("officeRight").style.filter = "blur(8px)";
-        getEle("officeLeft").style.filter = "blur(8px)";
-        getEle("doorButtonL").style.filter = "blur(8px)";
-        getEle("lightButtonL").style.filter = "blur(8px)";
-        getEle("doorButtonR").style.filter = "blur(8px)";
-        getEle("lightButtonR").style.filter = "blur(8px)";
-        getEle("doorL").style.filter = "blur(8px)";
-        getEle("doorR").style.filter = "blur(8px)";
-        getEle("fan").style.filter = "blur(8px)";
+        for (var i = 0; i < 9; i++)
+        {
+            getEle(office_id_names[i]).style.filter = "blur(8px)";
+        }
+
+        for (var i = 0; i < 7; i++)
+        {
+            getEle(id_names_2[i]).className = id_names_2[i];
+        }
 
         ad_music.play();
         getEle("tabletToggle").style.opacity = "100%";
         getEle("tabletToggle").style.top = "90px";
         getEle("tabletToggle").style.marginLeft = "1525px";
         getEle("tabletToggle").src = "../Assets/button_info_selected.png";
-        
-        getEle("tablet").className = "tablet";
-        getEle("power").className = "power";
-        getEle("usage").className = "usage";
-        getEle("heat").className = "heat";
-        getEle("hour").className = "hour";
-        getEle("night").className = "night";
-        getEle("muteCall").className = "muteCall";
 
         let static = 100;
         getEle("static2").className = "static";
@@ -390,15 +374,15 @@ let tabletToggle = () =>
     }
     else
     {
-        getEle("officeRight").style.filter = "none";
-        getEle("officeLeft").style.filter = "none";
-        getEle("doorButtonL").style.filter = "none";
-        getEle("lightButtonL").style.filter = "none";
-        getEle("doorButtonR").style.filter = "none";
-        getEle("lightButtonR").style.filter = "none";
-        getEle("doorL").style.filter = "none";
-        getEle("doorR").style.filter = "none";
-        getEle("fan").style.filter = "none";
+        for (var i = 0; i < 9; i++)
+        {
+            getEle(office_id_names[i]).style.filter = "none";
+        }
+
+        for (var i = 0; i < 7; i++)
+        {
+            getEle(id_names_2[i]).className = "hidden";
+        }
 
         ad_music.pause();
         ad_music.load();
@@ -406,14 +390,6 @@ let tabletToggle = () =>
         getEle("tabletToggle").style.top = "490px";
         getEle("tabletToggle").style.marginLeft = "1530px";
         getEle("tabletToggle").src = "../Assets/button_info.png";
-
-        getEle("tablet").className = "hidden";
-        getEle("power").className = "hidden";
-        getEle("usage").className = "hidden";
-        getEle("heat").className = "hidden";
-        getEle("hour").className = "hidden";
-        getEle("night").className = "hidden";
-        getEle("muteCall").className = "hidden";
         
         camera_open_tablet.play();
         tablet = false;
