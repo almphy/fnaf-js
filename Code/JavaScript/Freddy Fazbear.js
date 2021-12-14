@@ -241,11 +241,6 @@ function freddyDoorFunction()
         {
             jumpscare.play();
             getEle("jumpscare1").className = "jumpscare";
-            getEle("jumpscare1").requestFullscreen();
-            //getEle("jumpscare").src = "../Assets/Freddy/jumpscare.gif";
-            setTimeout(() => {
-                window.location.href = "https://www.youtube.com/watch?v=grd-K33tOSM";
-            }, 1000);
             return
         }
         else

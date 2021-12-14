@@ -47,19 +47,19 @@
     filter: invert(10%);
     opacity: 50%;
     border-radius: 10px;
-    top: 600px;
-    margin-left: 80px;
+    top: 585px;
+    margin-left: 210px;
     border: none;
     outline: solid #bdbdbd 2px;
     position: absolute;
     background: #505050;
     color: #bdbdbd;
-    width: 245px;
-    height: 40px;
+    width: 118px;
+    height: 60px;
     text-anchor: start;
     text-align: left;
     padding-top: 3px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: dashedFont;
     transition: 0.5s;
 }
@@ -73,10 +73,10 @@
 }
 .heat
 {
-    bottom: 150px;
-    margin-left: 0px;
+    bottom: -57px;
+    margin-left: 65px;
     position: absolute;
-    font-size: 90px;
+    font-size: 80px;
     color: white;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
     font-family: FNaF03;

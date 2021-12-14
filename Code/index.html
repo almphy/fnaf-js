@@ -37,18 +37,18 @@
 
         <img id="fan" src="../Assets/fan_spin.gif" onclick="fanToggle();">
 
-        <div id="tablet" class="hidden">
+        <div id="tablet" class="tablet">
 
-            <h1 id="power" class="hidden"> Power left: 100% </h1>
-            <h1 id="usage" class="hidden"> Power usage: x1 </h1>
-            <h1 id="heat" class="hidden"> 20∘ </h1>
+            <h1 id="power" class="power"> Power left: 100% </h1>
+            <h1 id="usage" class="usage"> Power usage: x1 </h1>
+            <h1 id="heat" class="heat"> 20∘ </h1>
         
-            <h1 id="hour" class="hidden"> 12 AM </h1>
-            <h1 id="night" class="hidden"> NIGHT </br> ONE </h1>
+            <h1 id="hour" class="hour"> 12 AM </h1>
+            <h1 id="night" class="night"> NIGHT </br> ONE </h1>
 
             <img id="static2" class="hidden" src="../Assets/static.gif">
         
-            <input id="muteCall" class="hidden" type="button" value="mute call" onclick="muteCall();">
+            <input id="muteCall" class="muteCall" type="button" value="Music Box" onclick="musicBoxToggle();">
 
         </div>
 
@@ -108,6 +108,7 @@
     <img id="jumpscare3" class="hidden" src="../Assets/Bonnie/jumpscare.gif">
     <img id="jumpscare4" class="hidden" src="../Assets/Foxy/jumpscare.png">
     <img id="jumpscare5" class="hidden" src="../Assets/Freddy/jumpscare.png">
+    <img id="jumpscare6" class="hidden" src="../Assets/Golden Freddy/gf_jumpscare.png">
     <img id="win" class="hidden" src="../Assets/win.gif">
 
     <script>
@@ -133,10 +134,9 @@
     var script_names =
     [
         "JavaScript/main.js","JavaScript/animatronics.js","JavaScript/variables.js",
-        "JavaScript/cameras.js","JavaScript/tablet.js","JavaScript/toggles.js",
-        "JavaScript/Bonnie the Bunny.js","JavaScript/Freddy Fazbear.js",
-        "JavaScript/Golden Freddy.js","JavaScript/Foxy the Pirate Fox.js",
-        "JavaScript/Chica the Chicken.js",
+        "JavaScript/cameras.js","JavaScript/tablet.js","JavaScript/Bonnie the Bunny.js",
+        "JavaScript/Freddy Fazbear.js","JavaScript/Chica the Chicken.js","JavaScript/Foxy the Pirate Fox.js",
+        "JavaScript/toggles.js","JavaScript/Golden Freddy.js"
     ];
 
     var variable_names = [];
@@ -149,7 +149,7 @@
 
     function loadJS()
     {
-        for (var i = 0; i < 9; i++)
+        for (var i = 0; i < script_names_night1.length; i++)
         {
             variable_names[i] = document.createElement("script");
             variable_names[i].setAttribute("src", script_names_night1[i]);

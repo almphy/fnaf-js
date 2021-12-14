@@ -11,7 +11,7 @@ let id_names =
 let office_id_names =
 [
     "officeRight","officeLeft","doorButtonL","lightButtonL",
-    "doorButtonR","lightButtonR","doorL","doorR","fan",
+    "doorButtonR","lightButtonR","doorL","doorR","fan","GoldenFreddy"
 ];
 
 let id_names_2 =
@@ -265,6 +265,24 @@ function lightFunction(side)
     }
 };
 
+function musicBoxToggle()
+{
+    if (gf_musicbox)
+    {
+        gf_musicbox_audio.pause();
+        gf_musicbox_audio.load();
+        gf_musicbox = false;
+        getEle("usage").innerHTML = `Power usage: x${power_usage - 1}`;
+    }
+    else
+    {
+        gf_musicbox_audio.play();
+        gf_musicbox = true;
+        getEle("usage").innerHTML = `Power usage: x${power_usage - 1}`;
+    }
+
+}
+
 //- wiatrak -
 function fanToggle() {
     desk_fan = !desk_fan;
@@ -336,14 +354,22 @@ tablet_on = new Audio("../Audio/tablet_on.wav");
     }
     if (!tablet)
     {
-        for (var i = 0; i < 9; i++)
+        for (var i = 0; i < office_id_names.length; i++)
         {
             getEle(office_id_names[i]).style.filter = "blur(8px)";
         }
 
-        for (var i = 0; i < 7; i++)
+        for (var i = 0; i < id_names_2.length; i++)
         {
             getEle(id_names_2[i]).className = id_names_2[i];
+        }
+
+        for (const element of office_id_names) {
+            getEle(element).style.filter = "blur(8px)";
+        }
+
+        for (const element of id_names_2) {
+            getEle(element).className = element;
         }
 
         ad_music.play();
@@ -374,14 +400,12 @@ tablet_on = new Audio("../Audio/tablet_on.wav");
     }
     else
     {
-        for (var i = 0; i < 9; i++)
-        {
-            getEle(office_id_names[i]).style.filter = "none";
+        for (const element of office_id_names) {
+            getEle(element).style.filter = "none";
         }
 
-        for (var i = 0; i < 7; i++)
-        {
-            getEle(id_names_2[i]).className = "hidden";
+        for (const element of id_names_2) {
+            getEle(element).className = "hidden";
         }
 
         ad_music.pause();

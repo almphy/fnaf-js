@@ -69,6 +69,7 @@ cc_kitchen02 = new Audio("../Audio/pots02.wav");
 cc_kitchen03 = new Audio("../Audio/pots03.wav");
 cc_kitchen04 = new Audio("../Audio/pots04.wav");
 ff_run = new Audio("../Audio/freddy_run.wav");
+gf_musicbox_audio = new Audio("../Audio/music_box01.mp3");
 
 //- definitions -
 

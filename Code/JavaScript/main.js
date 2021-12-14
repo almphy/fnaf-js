@@ -56,23 +56,6 @@ document.body.onkeyup = function(event)
 }
 
 
-//- telefon -
-let phoneCall = () =>
-{
-    clicked = true;
-
-    if (clicked)
-    {
-        setTimeout(() => {
-            night_1_call.play();
-        }, 1500);
-
-        setTimeout(() => {
-            getEle("muteCall").className = "muteCall";
-        }, 15000);
-    };
-};
-
 //- nos freddiego -
 let freddyNoseSound = () =>
 {
